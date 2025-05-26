@@ -1,0 +1,11 @@
+.py-data-grid-table{
+    border: 1px solid var(--border-color);
+    margin-top: 1em;
+    border-radius: 5px;
+    overflow: auto;
+    /* width: 100%; */
+}
+.py-datagrid-title{
+    font-size: 1.3em;
+    font-weight: bold;
+}

@@ -1,0 +1,775 @@
+/* --2xl-- */
+@media screen and (min-width:96rem) {
+
+    /* .py-selectable-pagination-container{
+        display: block !important;
+    } */
+    .page-right-left-container,
+    .flexi-footer .page-footer-container {
+        max-width: calc(min((95vw - 300px), (90em - 300px))) !important;
+    }
+
+    .interview-chatbot-container {
+        max-width: calc(90em);
+    }
+
+    .chat-box {
+        max-width: calc(65em);
+    }
+
+    .interview-rating-form-container {
+        max-width: 90em;
+    }
+
+    .interview-header-timer-container,
+    .interview-form-container {
+        gap: 3em;
+    }
+
+    .py-form-field-cont {
+        width: calc(50% - 48px);
+    }
+
+    .candidate-header-percentage .percentage-field {
+        display: none;
+    }
+
+
+
+    .plan-page-container {
+        padding: 0 2em;
+    }
+
+    .page-right-left-container,
+    .flexi-footer .page-footer-container {
+        max-width: calc(min((95vw - 300px), (85em - 300px))) !important;
+    }
+
+    .interview-chatbot-container {
+        max-width: calc(85em);
+    }
+
+    .chat-box {
+        max-width: calc(60em);
+    }
+
+    .interview-header-timer-container,
+    .interview-form-container {
+        gap: 3em;
+    }
+
+    .py-form-field-cont {
+        width: calc(50% - 48px);
+    }
+
+    .candidate-header-percentage .percentage-field {
+        display: none;
+    }
+
+
+    .plan-page-container {
+        padding: 0 2em;
+    }
+
+    .page-right-left-container,
+    .flexi-footer .page-footer-container {
+        max-width: calc((100vw - 300px) * 0.93) !important;
+    }
+
+    .interview-chatbot-container {
+        max-width: calc(75em);
+    }
+
+    .chat-box {
+        max-width: calc(50em);
+    }
+
+    .interview-rating-form-container {
+        max-width: 70em;
+    }
+
+    .dash-content-container,
+    .cad-form-container {
+        display: block;
+    }
+
+    .dash-left-content-container,
+    .cad-form-left-container {
+        overflow: hidden;
+    }
+
+    .dash-left-content:not(:first-child) {
+        margin-bottom: 0.5em;
+    }
+
+    .dash-right-content-container,
+    .cad-form-right-container {
+        padding: 0 10px 10px 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .dash-left-content-container,
+    .cad-form-left-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .candidate-modal {
+        --modal-size: 100%
+    }
+
+    .file-remove-icon {
+        opacity: 1;
+    }
+
+    .language-switcher-container {
+        width: 60%;
+    }
+
+    .interview-header-timer-container,
+    .interview-form-container {
+        gap: 3em;
+    }
+
+    .py-form-field-cont {
+        width: calc(50% - 48px);
+    }
+
+    .candidate-header-percentage .percentage-field {
+        display: none;
+    }
+
+}
+
+/* tab */
+/* --xl-- */
+@media screen and (min-width:80rem) {
+    .plan-page-container {
+        padding: 0 2em;
+    }
+
+    .page-right-left-container,
+    .flexi-footer .page-footer-container {
+        max-width: calc((100vw - 300px) * 0.95) !important;
+    }
+
+    .interview-chatbot-container {
+        max-width: calc(65em);
+    }
+
+    .chat-box {
+        max-width: calc(40em);
+    }
+
+    .dash-content-container,
+    .cad-form-container {
+        display: block;
+    }
+
+    .dash-left-content-container,
+    .cad-form-left-container {
+        overflow: hidden;
+    }
+
+    .dash-left-content:not(:first-child) {
+        margin-bottom: 0.5em;
+    }
+
+    .dash-right-content-container,
+    .cad-form-right-container {
+        padding: 0 10px 10px 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .dash-left-content-container,
+    .cad-form-left-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .candidate-modal {
+        --modal-size: 100%
+    }
+
+    .file-remove-icon {
+        opacity: 1;
+    }
+
+    .interview-rating-form-container {
+        max-width: 65em;
+    }
+
+    .language-switcher-container {
+        width: 60%;
+    }
+
+    .interview-header-timer-container,
+    .interview-form-container {
+        gap: 3em;
+    }
+
+    .py-form-field-cont {
+        width: calc(50% - 48px);
+    }
+
+    .candidate-header-percentage .percentage-field {
+        display: none;
+    }
+
+    .profile-form-switch-fields {
+        display: block;
+    }
+
+    .btn-switch-label {
+        margin-top: 10px;
+    }
+
+}
+
+/* --lg-- */
+@media screen and (min-width:64rem) {
+
+    .plan-page-container {
+        padding: 0 2em;
+    }
+
+    .page-right-left-container,
+    .flexi-footer .page-footer-container {
+        max-width: calc((100vw) * 0.95) !important;
+    }
+
+    .dash-content-container,
+    .cad-form-container {
+        display: block;
+    }
+
+    .dash-left-content-container,
+    .cad-form-left-container {
+        overflow: hidden;
+    }
+
+    .dash-left-content:not(:first-child) {
+        margin-bottom: 0.5em;
+    }
+
+    .dash-right-content-container,
+    .cad-form-right-container {
+        padding: 0 10px 10px 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .dash-left-content-container,
+    .cad-form-left-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .candidate-modal {
+        --modal-size: 100%
+    }
+
+    .file-remove-icon {
+        opacity: 1;
+    }
+
+    .language-switcher-container {
+        width: 60%;
+    }
+
+    .interview-header-timer-container,
+    .interview-form-container {
+        gap: 3em;
+    }
+
+    .py-form-field-cont {
+        width: calc(50% - 48px);
+    }
+
+    .candidate-header-percentage .percentage-field {
+        display: none;
+    }
+
+    .profile-form-switch-fields {
+        display: block;
+    }
+
+    .btn-switch-label {
+        margin-top: 10px;
+    }
+
+
+}
+
+/* --md-- */
+@media screen and (min-width:48rem) {
+
+    .plan-page-container {
+        padding: 0 2em;
+    }
+
+    .page-right-left-container,
+    .flexi-footer .page-footer-container {
+        max-width: calc((100vw) * 0.95) !important;
+    }
+
+    .interview-landing-container .page-footer-container {
+        width: calc(100%) !important;
+    }
+
+    .interview-rating-box-container {
+        width: 50%;
+    }
+
+    .job-edit-form-lookup-fields,
+    .job-edit-form-switch-fields {
+        display: block;
+    }
+
+    .job-edit-form-lookup-fields .job-form-options,
+    .job-edit-form-switch-fields .job-switch-field {
+        margin-top: 10px;
+    }
+
+    .dash-content-container,
+    .cad-form-container {
+        display: block;
+    }
+
+    .dash-left-content-container,
+    .cad-form-left-container {
+        overflow: hidden;
+    }
+
+    .dash-left-content:not(:first-child) {
+        margin-bottom: 0.5em;
+    }
+
+    .dash-right-content-container,
+    .cad-form-right-container {
+        padding: 0 10px 10px 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .dash-left-content-container,
+    .cad-form-left-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .candidate-modal {
+        --modal-size: 100%
+    }
+
+    .file-remove-icon {
+        opacity: 1;
+    }
+
+    .language-switcher-container {
+        width: 60%;
+    }
+
+    .interview-header-timer-container,
+    .interview-form-container {
+        gap: 3em;
+    }
+
+    .py-form-field-cont {
+        width: calc(50% - 48px);
+    }
+
+    .candidate-header-percentage .percentage-field {
+        display: none;
+    }
+
+    .profile-form-switch-fields {
+        display: block;
+    }
+
+    .btn-switch-label {
+        margin-top: 10px;
+    }
+
+}
+
+/* --sm-- */
+@media screen and (min-width:40rem) {
+
+    /* .py-selectable-pagination-left-container {
+        display: none;
+    }
+
+    .py-selectable-pagination-container {
+        justify-content: center;
+    } */
+
+    .fitmant-select .py-form-field-container {
+        padding: 0;
+    }
+
+    .plan-page-container {
+        padding: 0 2em;
+    }
+
+    /* .page-footer-container {
+        width: calc(100%) !important;
+    } */
+
+    .interview-rating-box-container {
+        width: 100% !important;
+    }
+
+    .form-section-header-container {
+        gap: 7px;
+    }
+
+    .user-profile-field {
+        font-size: 15px;
+    }
+
+    .py-dataGrid-header-text,
+    .py-grid-data-cell {
+        font-size: 12px !important;
+    }
+
+    .page-copyright {
+        font-size: 12px;
+    }
+
+    .job-edit-form-lookup-fields,
+    .job-edit-form-switch-fields {
+        display: block;
+    }
+
+    .job-edit-form-lookup-fields .job-form-options,
+    .job-edit-form-switch-fields .job-switch-field {
+        margin-top: 10px;
+    }
+
+    .dash-content-container,
+    .cad-form-container {
+        display: block;
+    }
+
+    .dash-left-content-container,
+    .cad-form-left-container {
+        overflow: hidden;
+    }
+
+    .dash-left-content:not(:first-child) {
+        margin-bottom: 0.5em;
+    }
+
+    .dash-right-content-container,
+    .cad-form-right-container {
+        padding: 0 10px 10px 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .dash-left-content-container,
+    .cad-form-left-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .candidate-modal {
+        --modal-size: 100%
+    }
+
+    .candidate-edit-container .icon-container {
+        justify-content: center;
+    }
+
+    .candidate-edit-container .header-icon {
+        display: none;
+    }
+
+    .file-remove-icon {
+        opacity: 1;
+    }
+
+    .language-switcher-container {
+        width: 60%;
+    }
+
+    .page-copyright {
+        display: none;
+    }
+
+    .language-switcher-container {
+        width: 60%;
+    }
+
+    .interview-header-timer-container {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px !important;
+    }
+
+    .py-form-field-cont {
+        width: 100%;
+    }
+
+    .interview-form-container {
+        gap: 15px;
+        margin-top: 20px !important;
+    }
+
+    .interview-time-container .label,
+    .data,
+    .section-title {
+        font-size: 12px;
+    }
+
+    .interview-time-container .label,
+    .data {
+        width: 40% !important;
+    }
+
+    .interview-time-container:not(:first-child) {
+        margin: 0px !important;
+    }
+
+    .form-header-text {
+        font-size: 17px !important;
+    }
+
+    .section-subtitle {
+        font-size: 11px;
+    }
+
+    .interview-header-text {
+        font-size: 20px;
+    }
+
+    .interview-time-container {
+        font-size: 14px;
+    }
+
+    .interview-time {
+        margin: 5px auto;
+    }
+
+    .timer-section {
+        font-size: 15px;
+    }
+
+    .interview-rating-img-content img {
+        display: none;
+    }
+
+    .interview-form-field-label {
+        font-size: 12px !important;
+    }
+
+    .text-view-value-filled {
+        margin-top: 3px !important;
+        min-height: 35px !important;
+        font-size: 13px !important;
+    }
+
+    .interview-button-container {
+        margin-top: 1em !important;
+    }
+
+    .interview-button-container .filled-button {
+        font-size: 12px !important;
+    }
+
+    .interview-complete-button-container .filled-button {
+        font-size: 12px !important;
+    }
+
+    .timer-field .time-data {
+        font-size: 12px !important;
+    }
+
+    .rcb-bot-message,
+    .rcb-user-message {
+        font-size: 12px !important;
+    }
+
+    .candidate-edit-container .icon-container {
+        gap: 15px !important;
+    }
+
+    .candidate-edit-container .header-container {
+        display: block;
+    }
+
+    .candidate-edit-container .header-right-container {
+        gap: 0px !important;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .candidate-edit-container .header-percentage {
+        justify-content: center;
+    }
+
+    .candidate-edit-container .filled-button {
+        width: 100%;
+    }
+
+    .candidate-edit-container .header-btn-container {
+        padding: 5px 12px 5px 20px;
+    }
+
+    .candidate-edit-container .header-text {
+        font-size: 16px !important;
+    }
+
+    .candidate-edit-container .sub-header-text {
+        font-size: 12 !important;
+    }
+
+    .header-percentage .percentage-field {
+        display: none;
+    }
+
+    .card-feature-list {
+        font-size: 15px;
+    }
+
+    .dropzone-header-container {
+        display: block;
+        justify-content: end !important;
+    }
+
+    .upload-img-btn-container {
+        justify-content: end;
+        margin-top: 15px;
+        gap: 10px !important
+    }
+
+    .mantine-Breadcrumbs-breadcrumb {
+        font-size: 15px;
+    }
+
+    .form-header-sticky-container {
+        display: block !important;
+    }
+
+    .form-btn-container {
+        margin: 10px 0 10px 0;
+    }
+
+    .mantine-InputWrapper-label,
+    .btn-switch-label,
+    .menu-list {
+        font-size: 14px !important;
+    }
+
+    .profile-form-switch-fields {
+        display: block;
+        font-size: 14px !important;
+    }
+
+    .btn-switch-label {
+        margin-top: 10px;
+    }
+
+    .btn-switch-container {
+        margin-top: 10px;
+    }
+
+    .py-datagrid-header {
+        display: block;
+    }
+
+    .py-datagrid-header-left-container {
+        justify-content: end !important;
+        margin-top: 5px;
+    }
+
+    .cad-form-container .form-btn-container {
+        display: none;
+    }
+
+    .dropzone-container {
+        display: block;
+    }
+
+    .file-cards-container {
+        width: 100% !important;
+    }
+
+
+    .dropzone {
+        width: 100% !important;
+        margin: 10px 0;
+    }
+
+    .dropzone-header-text {
+        font-size: 17px;
+    }
+
+    .py-action-button,
+    .cancel-filled-button,
+    .cancel-li-filled-button,
+    .filled-button,
+    .disable-button {
+        font-size: 12px !important;
+        padding: 5px;
+        min-width: 120px;
+        min-height: 40px;
+    }
+
+    .button-icon {
+        font-size: 12px !important;
+    }
+
+    .btn-switch,
+    .btn-switch-selected {
+        font-size: 12px !important;
+        height: 80px !important;
+        padding: 0px !important;
+    }
+
+    .grid-container {
+        font-size: 12px;
+    }
+
+    .interview-header-text,
+    .py-datagrid-title,
+    .h3,
+    .profile-avathar-text {
+        font-size: 16px !important;
+    }
+
+    .profile-avathar-img img,
+    .profile-avathar-img {
+        height: auto;
+    }
+
+    .Toastify__toast,
+    .user-name,
+    .user-prof-name,
+    .user-profile-value {
+        font-size: 13px;
+    }
+
+    h2,
+    .header-text {
+        font-size: 18px !important;
+    }
+
+    .job-edit-input,
+    .user-percentage-field {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .job-edit-input {
+        margin-top: 1em;
+    }
+
+    .job-edit-form-switch-fields,
+    .job-edit-form-lookup-fields {
+        padding: 0 1em 0em 1em !important;
+    }
+}

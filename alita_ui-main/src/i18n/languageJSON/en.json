@@ -1,0 +1,560 @@
+{
+  "authPage": {
+    "loginForm": {
+      "title": "Welcome Back!",
+      "label": {
+        "email": "Email",
+        "pwd": "Password",
+        "button": "Login",
+        "emailPH": "myname@company.com"
+      },
+      "footer": {
+        "signUpText": "Don't have an account?",
+        "resetPwdText": "Forgot password?",
+        "signUpLink": "Sign Up",
+        "resetPwdLink": "Reset Password"
+      },
+      "error": "Invalid credentials"
+    },
+    "signUpForm": {
+      "title": "Create your account",
+      "compLabel": {
+        "name": "Company Name",
+        "website": "Company Website",
+        "email": "Company Email",
+        "emailPH": "myname@company.com",
+        "mobilePH": "+91 xxxxx xxxxx",
+        "mobile": "Mobile",
+        "location": "Location",
+        "button": "Continue"
+      },
+      "indLabel": {
+        "name": "Individual Name",
+        "website": "LinkedIn URL",
+        "email": "Email",
+        "emailPH": "myname@example.com",
+        "mobilePH": "+91 xxxxx xxxxx",
+        "mobile": "Mobile",
+        "location": "Location",
+        "button": "Continue"
+      },
+      "footer": {
+        "loginText": "Already have an account?",
+        "loginLink": "Login"
+      },
+      "error": "User Already Exists"
+    },
+    "resetPwdForm": {
+      "title": "Reset Password",
+      "label": {
+        "code": "Email Verification Code",
+        "pwd": "Enter Password",
+        "rePwd": "Re-enter Password",
+        "button": "Continue"
+      },
+      "footer": {
+        "signUpText": "Don't have an account?",
+        "signUpLink": "Sign Up"
+      },
+      "tokenError": "Invalid token!",
+      "uidError": "Invalid UID!"
+    },
+    "authVerifyForm": {
+      "title": "Verify your account",
+      "label": {
+        "code": "Email Verification Code",
+        "pwd": "Enter Password",
+        "rePwd": "Re-enter Password",
+        "button": "Continue"
+      },
+      "footer": {
+        "loginText": "Already have an account?",
+        "loginLink": "Login"
+      },
+      "codeError": "Validation Failed",
+      "pwdError": "User matching query does not exist."
+    },
+    "forgotPwdForm": {
+      "title": "Let's reset it...",
+      "label": {
+        "email": "Email",
+        "emailPH": "myname@company.com",
+        "button": "Send Email"
+      },
+      "footer": {
+        "signUpText": "Don't have an account?",
+        "signUpLink": "Sign Up"
+      },
+      "error": "User not found!"
+    }
+  },
+  "sidebarMenu": {
+    "dashboard": "Dashboard",
+    "company": "Company",
+    "jobs": "Jobs",
+    "applications": "Applications",
+    "candidates": "Candidates",
+    "users": "Users",
+    "logout": "Logout",
+    "confirmDialog": {
+      "title": "Confirm!",
+      "description": "Are you sure you want to logout?"
+    }
+  },
+  "changePassword": {
+    "title": "Update Password",
+    "curPwd": "Current Password",
+    "newPwd": "New Password",
+    "errorMsg": "Atleast min 8 chars"
+  },
+  "deleteConfirmDialog": {
+    "title": "Confirm!",
+    "description": "Are you sure you want to delete this"
+  },
+  "toastMsg": {
+    "serverError": "Server problem.. Please try again later",
+    "invaCre": "Invalid Credentials",
+    "pwdMsg": "Password Changed Successfully..",
+    "token": "Token is Invalid or expired.",
+    "pwd": "Password is Mandatory",
+    "name": "Name is Mandatory",
+    "comweb": "Company website is Mandatory",
+    "mobile": "Mobile number is Mandatory",
+    "fillMan": "Fill Mandatory fields",
+    "missMan": "Missing Mandatory fields",
+    "emailExist": "Email Already Exists",
+    "allExist": "Already Exists",
+    "conPwd": "Confirm Password is Mandatory",
+    "bothPwd": "Passwords do not match",
+    "restPwdLink": "Password reset link sent... Check your Email",
+    "emailPwd": "Email and Password are Mandatory",
+    "reqFail": "Request Failed. Please try again...",
+    "fileDetect": "More than 5 files or Duplicate files detected, none added",
+    "jobTitle": "Select Job title",
+    "updSuccess": "Updated Successfully",
+    "saveSuccess": "Saved Successfully",
+    "dataExists": "Data Already Exist",
+    "interTime": "Interview time is over",
+    "interComplete": "The interview has been successfully completed. Please click the 'Complete Interview' Button",
+    "errorMsg": {
+      "InvInput": "Invalid Input",
+      "email": "Email is Mandatory",
+      "pwd": "Password is Mandatory",
+      "invalidEmail": "Invalid Email",
+      "invalidPwd": "Password must be a minimum of 8 characters and a maximum of 15 characters, consisting of a number, uppercase, lowercase and a special character",
+      "invalidMobile": "Invalid Mobile Number",
+      "mismatch": "Password mismatch",
+      "digit": "Enter 6 digit code",
+      "numbers": "Numbers only",
+      "req": "This field is mandatory",
+      "min": "Minimum",
+      "max": "Maximum"
+    }
+  },
+  "flexiPlanPage": {
+    "title": "Flexi Plans",
+    "cards": [
+      {
+        "title": "Starter",
+        "plan": "$0",
+        "month": "month",
+        "subText": "Solo recruiters or small trials",
+        "features": [
+          {
+            "name": "1 Recruiter Account"
+          },
+          {
+            "name": "2 Job Posting"
+          },
+          {
+            "name": "Basic Screening"
+          },
+          {
+            "name": "10 Candidate Assessments"
+          },
+          {
+            "name": "Basic Analytics"
+          }
+        ]
+      },
+      {
+        "title": "Pro Recruit",
+        "plan": "$99",
+        "month": "month",
+        "subText": "Solo recruiters or small trials",
+        "features": [
+          {
+            "name": "2 Recruiter Accounts"
+          },
+          {
+            "name": "5 Job Posting"
+          },
+          {
+            "name": "Advanced Screening"
+          },
+          {
+            "name": "50 Candidate Assessments"
+          },
+          {
+            "name": "Advanced Analytics"
+          },
+          {
+            "name": "Customizable Assessments"
+          }
+        ]
+      },
+      {
+        "title": "Talent Suite",
+        "plan": "$199",
+        "month": "month",
+        "subText": "Perfect for Collaborators",
+        "features": [
+          {
+            "name": "5 Recruiter Accounts"
+          },
+          {
+            "name": "10 Job Posting"
+          },
+          {
+            "name": "Advanced Screening"
+          },
+          {
+            "name": "100 Candidate Assessments"
+          },
+          {
+            "name": "Advanced Analytics"
+          },
+          {
+            "name": "Customizable Assessments"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise Plus",
+        "plan": "Custom",
+        "month": "month",
+        "subText": "Perfect for Organizations",
+        "features": [
+          {
+            "name": "Unlimited Recruiter Accounts"
+          },
+          {
+            "name": "Unlimited Job Posting"
+          },
+          {
+            "name": "Advanced Screening"
+          },
+          {
+            "name": "Unlimited Candidate Assessments"
+          },
+          {
+            "name": "Advanced Analytics"
+          },
+          {
+            "name": "Customizable Assessments"
+          }
+        ]
+      }
+    ]
+  },
+  "buttonLabels": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "submit": "Submit Application",
+    "submitCan": "Submit Candidates",
+    "edit": "Edit",
+    "update": "Update",
+    "upload": "Upload",
+    "upldsub": "Upload",
+    "sub": "Submit",
+    "yes": "Yes",
+    "no": "No",
+    "add": "Add",
+    "remove": "Cancel",
+    "bToHome": "Back to Home",
+    "job": {
+      "cJob": "Create Job",
+      "sJob": "Save Job",
+      "aReject": "Auto Reject",
+      "mReject": "Manual Reject"
+    },
+    "application": {
+      "upApp": "Upload Application"
+    },
+    "candidate": {
+      "upCan": "Create Candidate"
+    },
+    "companies": {
+      "cComp": "Create Company"
+    },
+    "flexiPlan": {
+      "start": "Get Started",
+      "sale": "Contact Sale"
+    },
+    "profile": {
+      "del": "Delete My Account",
+      "upPwd": "Update Password",
+      "chPwd": "Change Password",
+      "sMail": "Send Email",
+      "dontSend": "Don't Mail Me",
+      "act": "Activate",
+      "deAct": "Deactivate"
+    },
+    "interview": {
+      "continue": "Continue to Interview",
+      "complete": "Complete Interview",
+      "start": "Start Assessment",
+      "revisit": "Revisit Later",
+      "submit": "Submit Answer"
+    },
+    "user": {
+      "create": "Create User"
+    }
+  },
+  "jobPage": {
+    "title": "Jobs",
+    "imgTooltip": "Click to Upload Image",
+    "grid": {
+      "id": "Role Id",
+      "name": "Role Name",
+      "shDesc": "Short Description",
+      "date": "Date",
+      "upload": "Uploaded",
+      "screened": "Screened",
+      "status": "Status",
+      "action": "Action",
+      "salary": "salary"
+    },
+    "dashboardgrid": {
+      "title": "Job Listings",
+      "client": "Client",
+      "jobTitle": "Job Title",
+      "date": "Date",
+      "screened": "Screened",
+      "status": "Status"
+    },
+    "new": {
+      "title": "Create Job"
+    },
+    "edit": {
+      "title": "Update Job"
+    },
+    "input": {
+      "jobTitle": "Job Title",
+      "jobDesc": "Job Description",
+      "subDesc": "requirements, skills, qualifications, responsibilities",
+      "jobDescPh": "A job description must include requirements, skills, qualifications, and responsibilities to explain what is needed for the role (minimum 50 words).",
+      "aiGen": "AI Generated Short Description (Fill in the job description to generate short description)",
+      "fitment": "Fitment Auto Reject",
+      "screening": "Screening Auto Reject",
+      "skill": "Interview Skills (Fill in the job description to see skills)",
+      "points": "Points to Note",
+      "desc": "Description",
+      "lob": "LOB",
+      "city": "City",
+      "state": "State/Province",
+      "zip": "Zip/Postal code",
+      "country": "Country/Region",
+      "skillPh": "Select Skill",
+      "skillLoad": "Loading...",
+      "skillNoData": "-- No Data Avilable --",
+      "descPh": "Add Address",
+      "lobPh": "Input code",
+      "cityPh": "Select city",
+      "statePh": "Select province",
+      "countryPh": "Select country/region",
+      "interviewQns": "Screening Interview Questions Count",
+      "interviewTime": "Screening Interview Time (in minutes)",
+      "fitmentLimit": "Fitment Limit",
+      "selectPriSkill": "Select Primary Skill",
+      "selectSecSkill": "Select Secondary Skill",
+      "selectTerSkill": "Select Tertiary Skill"
+    }
+  },
+  "application": {
+    "title": "Applications",
+    "subTitle": "Uploaded Applications",
+    "info": "Candidate Info",
+    "grid": {
+      "id": "Client",
+      "name": "Role Name",
+      "canName": "Candidate Name",
+      "date": "Date",
+      "resume": "Resume Overview",
+      "fitment": "Fitment Score (%)",
+      "status": "Status",
+      "location": "location"
+    },
+    "new": {
+      "title": "Upload Applications",
+
+      "subtitle": "Upload Candidates",
+      "img": {
+        "upload": "Upload Files",
+        "drop": "Drop files here",
+        "format": "Supported format: PDF, DOCX (Maximum 5)",
+        "or": "OR",
+        "browse": "Browse Files"
+      }
+    },
+    "edit": {
+      "title": "Fitment Summary"
+    },
+    "input": {
+      "jobTitle": "Job Title",
+      "aiGen": "AI Generated Short Description",
+      "status": "Status",
+      "resume": "Resume Overview",
+      "posting": "Relevence to Job Posting",
+      "fitment": "Fitment Score",
+      "feedback": "AI Interview feedback",
+      "email": "Email",
+      "profile": "Profile",
+      "location": "Location",
+      "name": "Name",
+      "mobile": "Mobile",
+      "tech": "Tech Stacks",
+      "summary": "Resume Summary",
+      "fitsummary": "Fitment Summary",
+      "jobTitlePh": "Select Job Title"
+    }
+  },
+  "candidates": {
+    "title": "Candidates",
+    "subTitle": "Uploaded Candidates",
+    "info": "Candidate Info",
+    "grid": {
+      "id": "Client",
+      "canName": "Candidate Name",
+      "last": "Last Updated Date",
+      "date": "Date",
+      "resume": "Resume Overview",
+      "status": "Status"
+    },
+    "new": {
+      "title": "Upload Candidates",
+      "img": {
+        "upload": "Upload Files",
+        "drop": "Drop files here",
+        "format": "Supported format: PNG, JPG",
+        "format1": "Supported format: XLSX,CSV ",
+        "or": "OR",
+        "browse": "Browse Files"
+      }
+    }
+  },
+  "profile": {
+    "title": "My Profile",
+    "imgTooltip": "Click to Upload Image",
+    "edit": {
+      "title": "Edit Profile"
+    },
+    "input": {
+      "fName": "First Name",
+      "lName": "Last Name",
+      "email": "Email",
+      "mobile": "Mobile",
+      "notify": "Email Notification",
+      "status": "Status",
+      "location": "Location",
+      "confirm": "Are you sure you want to change the password?"
+    }
+  },
+  "company": {
+    "title": "Companies",
+    "grid": {
+      "client": "Client",
+      "compName": "Company Name",
+      "date": "Date",
+      "jobs": "Jobs",
+      "candidates": "Candidates",
+      "status": "Status"
+    },
+    "view": {
+      "title": "Company",
+      "compInfo": "Company Info",
+      "infoSub": "Nisi laborum eiusmod mollit pa",
+      "billInfo": "Billing Info"
+    },
+    "edit": {
+      "title": "Edit Company",
+      "compInfo": "Company Info",
+      "infoSub": "Nisi laborum eiusmod mollit pa",
+      "billInfo": "Billing Info"
+    },
+    "input": {
+      "fName": "First Name",
+      "lName": "Last Name",
+      "email": "Email",
+      "mobile": "Mobile",
+      "addr": "Address",
+      "compName": "Company Name",
+      "compAdd": "Company Address",
+      "web": "Website",
+      "webPH": "Add VAT Number",
+      "gst": "GST Number",
+      "desc": "Description",
+      "lob": "LOB",
+      "city": "City",
+      "state": "State/Province",
+      "zip": "Zip/Postal code",
+      "country": "Country/Region",
+      "descPh": "Add Address",
+      "lobPh": "Input code",
+      "cityPh": "Select city",
+      "statePh": "Select province",
+      "countryPh": "Select country/region"
+    }
+  },
+  "interview": {
+    "title": "Interview for Senior Engineer with Variant Tech",
+    "thanku": "Thank You !",
+    "care": "Care to share more",
+    "rating": "Rating",
+    "totalQns": "Questions",
+    "totalTime": "Duration",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "intCom": "Interview Successfully Completed...",
+    "intComSub": "Congratulations! We will contact you soon with the next steps.",
+    "confirmDialog": {
+      "title": "Confirm!",
+      "interCom": "Interview Submission",
+      "interDes": "The interview has been successfully completed. Please click the 'Submit' Button",
+      "description": "Are you sure you want to complete Interview?",
+      "conDesc": "To participate in the interview, we need access to your webcam and microphone and entire screen sharing. Please click 'Yes' to proceed."
+    },
+    "intruction": {
+      "title": "Interview Assessment",
+      "one": "Time Allotment: The total duration of the Interview is 60 mins. Manage your time carefully across all sections.",
+      "two": "Single Browser Window: Use only one browser window for the interview platform.",
+      "three": "Tab Restrictions: Avoid switching between tabs during the interview.",
+      "four": "Background Applications: Close all unnecessary programs and browser tabs (social media, email, etc.).",
+      "five": "Distraction-Free Environment: Find a quiet space with minimal distractions and disable notifications.",
+      "six": "Consequences: Monitoring may be in place. Switching tabs may result in disqualification.",
+      "seven": "Full-Screen Mode: Do not press Esc to exit full-screen mode.",
+      "eight": "Webcam/Microphone and Entire Screen Sharing Access: To participate in the interview, we need access to your webcam/microphone and entire screen sharing."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "chartTitle": "Statistics"
+  },
+  "users": {
+    "grid": {
+      "title": "Users",
+      "id": "Id",
+      "email": "Email",
+      "name": "Name",
+      "location": "Location",
+      "status": "Status",
+      "mobile": "Mobile"
+    },
+    "edit": {
+      "title": "Edit User"
+    },
+    "new": {
+      "title": "Create User"
+    }
+  }
+}

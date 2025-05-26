@@ -1,0 +1,53 @@
+.form-section-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-section-right-header {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-section-left-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bill-icon {
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+.company-form-img-field {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.company-form-img-field img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.section-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.section-subtitle {
+    color: rgba(var(--dark-color-rgb), 0.5);
+}
+
+.company-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2em 0;
+}

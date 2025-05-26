@@ -1,0 +1,291 @@
+.instruction-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.interview-form .text-view-value-filled {
+    margin-left: 0;
+}
+
+.timer-section .label {
+    color: rgba(var(--dark-color-rgb), 0.6);
+}
+
+.clock-field {
+    background-color: rgba(var(--default-color-rgb), 1);
+    border-radius: 5px;
+}
+
+.timer-field .data-less {
+    color: red;
+}
+
+.timer-field .time-data {
+    background-color: rgba(var(--primary-color-rgb), 0.85);
+    border: 4px solid white;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+/* voice-chatbot */
+
+.voice-progress-container {
+    background-color: rgba(241, 245, 254, 255);
+    width: 65%;
+    margin: 0 52px;
+}
+
+.low-rating,
+.high-rating,
+.neutral-rating {
+    transform: scale(1.02);
+}
+
+.low-rating {
+    color: red;
+}
+
+.neutral-rating {
+    color: orange;
+}
+
+.high-rating {
+    color: green;
+}
+
+
+/* --chat box -- */
+.chat-box {
+    transition: all 0.3s ease;
+}
+
+.rcb-window-embedded .rcb-chat-window {
+    box-shadow: none !important;
+    width: 100%;
+    border-radius: 0px;
+    padding: 0.5em;
+}
+
+.rcb-chat-body-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 16px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    touch-action: pan-y;
+}
+
+.rcb-chat-window {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #0003;
+    background-color: #fff;
+    transition: all .3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    z-index: 10000;
+}
+
+.rcb-chat-header-container {
+    display: none !important;
+}
+
+.rcb-chat-header {
+    color: #000 !important;
+}
+
+.rcb-chat-footer-container {
+    display: none !important;
+}
+
+.rcb-notification-icon {
+    display: none !important;
+}
+
+.rcb-audio-icon svg {
+    fill: rgb(0, 0, 0) !important;
+}
+
+.rcb-chat-input {
+    padding: 8px 16px;
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+}
+
+.rcb-bot-message {
+    min-width: 65% !important;
+}
+
+.rcb-bot-message-entry {
+    background-color: rgba(241, 245, 254, 255) !important;
+    color: #000 !important;
+    border-radius: 0px !important;
+}
+
+.rcb-user-message-entry {
+    background-color: rgba(243, 244, 246, 255) !important;
+    color: #000 !important;
+    border-radius: 7px !important;
+    text-align: left;
+}
+
+.rcb-send-icon svg {
+    fill: rgb(15, 69, 140) !important;
+}
+
+.rcb-chat-input-button-container {
+    display: flex;
+    font-size: small;
+}
+
+.rcb-send-button {
+    background-color: rgb(255, 255, 255) !important;
+    display: inline-flex;
+    justify-content: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 3px #0000004d;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    height: 32px;
+    width: 51px;
+    margin-left: 8px;
+}
+
+.rcb-chat-input-textarea {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    resize: none;
+    height: 70px;
+    min-height: 38px;
+    overflow-y: scroll;
+    font-family: inherit;
+    background-color: #fff;
+    color: #000;
+    touch-action: none;
+}
+
+.rcb-chat-input-textarea:focus {
+    box-shadow: unset !important;
+}
+
+.rcb-voice-button-enabled {
+    border: 1px solid rgba(15, 69, 140, 255) !important;
+    box-shadow: 0 0 3px rgba(15, 69, 140, 255) !important;
+}
+
+.rcb-voice-button-disabled:hover {
+    box-shadow: 0 0 3px rgba(15, 69, 140, 255) !important;
+}
+
+.rcb-voice-button-disabled {
+    border: 1px;
+    border-top-style: none;
+    border-top-color: currentcolor;
+    border-right-style: none;
+    border-right-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-color: currentcolor;
+    border-left-style: none;
+    border-left-color: currentcolor;
+    border-style: solid;
+    border-color: #0003;
+}
+
+.rcb-voice-button-enabled {
+    border: 1px solid red;
+    box-shadow: 0 0 3px #ff000080;
+}
+
+
+/* slider */
+
+.ant-slider .ant-slider-track,
+.ant-slider-handle,
+.ant-slider .ant-slider-track:hover {
+    background-color: rgba(15, 69, 140, 255) !important;
+}
+
+.ant-slider .ant-slider-rail,
+.ant-slider .ant-slider-rail:hover {
+    background-color: rgba(164, 199, 245, 255) !important;
+}
+
+.layoutkit-flexbox {
+    width: 65% !important;
+}
+
+.acss-rcz9dr:hover {
+    background-color: transparent !important;
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-slider .ant-slider-handle::after {
+    box-shadow: 0 0 0 2px rgba(15, 69, 140, 255) !important;
+    outline: 6px solid rgba(15, 69, 140, 255, 0.2) !important;
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-slider-horizontal .ant-slider-track,
+:where(.css-dev-only-do-not-override-cdzvx5).ant-slider-horizontal .ant-slider-tracks,
+:where(.css-dev-only-do-not-override-cdzvx5).ant-slider-horizontal .ant-slider-rail {
+    height: 5px;
+    border-radius: 3px;
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-slider-horizontal .ant-slider-handle {
+    top: 1px;
+}
+
+/* Interview -- change comp */
+
+.interview-qns .mantine-Pagination-control {
+    min-width: 50px !important;
+}
+
+.interview-qns .m_326d024a:where([data-active]) {
+    border: rgba(var(--primary-color-rgb), 1) solid 2px !important;
+}
+
+.interview-qn-bg {
+    background-color: rgba(241, 245, 254, 255) !important;
+    color: #000 !important;
+    border-radius: 7px !important;
+}
+
+.interview-ans-bg {
+    background-color: rgba(243, 244, 246, 255) !important;
+    color: #000 !important;
+    border-radius: 7px !important;
+}
+
+.qn-submit,
+.qn-submit:hover {
+    background-color: rgba(241, 245, 254, 255) !important;
+    color: black !important;
+}
+
+.qn-revisit,
+.qn-revisit:hover,
+.qn-revisit:active {
+    border: 1px solid gray !important;
+    color: gray !important;
+    background-color: transparent !important;
+}
+
+.qn-pagination-btn:hover {
+    background-color: rgba(var(--primary-color-rgb), .9);
+    color: white;
+}

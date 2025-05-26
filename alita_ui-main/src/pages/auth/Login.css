@@ -1,0 +1,35 @@
+/* .auth-form .py-form-field-container {
+  padding: 0;
+}
+
+.login-forgot-pwd-link {
+  color: var(--login-btn-hover-bgcolor);
+}
+
+.login-btn {
+  background-color: var(--primary-bgcolor) !important;
+  color: var(--login-btn-color) !important;
+  border-radius: 10px !important;
+  width: 100%;
+}
+
+.disable-login-btn {
+  color: var(--light-gray-text);
+  background: var(--light-gray-bg);
+  width: 100% !important;
+  font-size: var(--fs-md-x1) !important;
+  font-weight: bold !important;
+  border-radius: 10px !important;
+  margin-bottom: 1em !important;
+  min-height: 50px;
+  margin-top: 2em;
+}
+
+.login-btn:hover {
+  background-color: var(--login-btn-hover-bgcolor) !important;
+}
+
+.signup-type .m_8a3dbb89:checked {
+  background-color: var(--login-btn-hover-bgcolor);
+  border-color: var(--login-btn-hover-bgcolor);
+} */

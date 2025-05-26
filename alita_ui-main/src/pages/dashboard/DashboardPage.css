@@ -1,0 +1,143 @@
+.dash-content-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.dash-left-content-container {
+    width: calc(70% - 10px);
+    align-self: flex-start;
+    height: calc(100vh - 160px);
+    overflow: auto;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.dash-left-content {
+    border-radius: 5px;
+    padding: 1em;
+    box-shadow: var(--page-box-shadow)
+}
+
+.dash-left-content:not(:first-child) {
+    margin-top: 1em;
+}
+
+.dash-right-content-container {
+    width: calc(30% - 10px);
+    align-self: flex-start;
+    height: calc(100vh - 160px);
+    overflow: auto;
+    transition: all 0.3s ease;
+    padding-bottom: 2em;
+}
+
+.dash-layout-container {
+    padding-bottom: 2em;
+    height: calc(100vh - 210px);
+}
+
+/* --- user updates -- */
+.acrd-header {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 2em; */
+}
+
+.dash-user-update-header {
+    /* position: sticky;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 1em 0; */
+    background-color: rgb(248, 248, 248);
+}
+
+.acrd-header .user-icon {
+    color: var(--pink-color);
+}
+
+/* .acrd-header .user-profile-field {
+    align-self: flex-start;
+}
+
+.acrd-header .user-profile-field-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+} */
+
+/* .acrd-header .user-name {
+    font-weight: 600;
+} */
+
+.acrd-header .user-prof-name {
+    color: rgba(var(--dark-color-rgb), 0.65);
+}
+
+.acrd-header .user-percentage-field {
+    background-color: rgba(var(--blue-color-rgb), 0.06);
+    color: var(--blue-color);
+    transition: all 0.3s ease;
+}
+
+.acrd-panel-detail .user-profile-field:not(:first-child) {
+    /* margin-top: 10px; */
+}
+
+.acrd-panel-detail .user-profile-label {
+    /* font-weight: 600; */
+}
+
+.acrd-panel-detail .user-profile-value {
+    color: rgba(var(--dark-color-rgb), 0.65);
+}
+
+.acrd-btn-container {
+    /* width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1em; */
+    background-color: var(--primary-color);
+    /* border-radius: 5px;
+    cursor: pointer; */
+}
+
+.acrd-btn-container .cancel-oulined-button,
+.acrd-btn-container .filled-button {
+    width: 50%;
+}
+
+.acrd-btn-container .cancel-oulined-button:active,
+.acrd-btn-container .filled-button:active {
+    transform: scale(1.01);
+}
+
+.acrd-candidates-no-data {
+    color: rgba(var(--dark-color-rgb), 0.65);
+}
+
+/* --mantine -- */
+.mantine-Accordion-root {
+    border-radius: 10px !important;
+}
+
+.mantine-Accordion-item:where([data-active='true']) .mantine-Accordion-control:hover {
+    background-color: rgba(var(--blue-color-rgb), 0.005) !important;
+}
+
+.mantine-Accordion-item:where([data-active='true']) {
+    background-color: rgba(var(--blue-color-rgb), 0.065) !important;
+}
+
+.mantine-Accordion-item:where([data-active='true']) .user-percentage-field {
+    background-color: rgba(var(--blue-color-rgb), 1);
+    color: var(--default-color);
+}

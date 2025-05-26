@@ -1,0 +1,262 @@
+/* .sidebar {
+    color: black;
+}
+
+.sidebar-drawer .mantine-Drawer-content,
+.sidebar-drawer .mantine-Drawer-header {
+    background-color: rgba(var(--default-bgcolor-rgb), 1) !important;
+}
+
+.sidebar-img-conatainer {
+    width: 260px;
+    padding: 0 1em;
+}
+
+.sidebar-img-conatainer img {
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.sidebar-container-minimize {
+    width: 0 !important;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu-container {
+    height: calc(100vh - 30px);
+    margin: 1em;
+    background-color: rgba(var(--dark-color-rgb), 0.05);
+    border-radius: 5px;
+}
+
+.sidebar-footer {
+    padding: 10px;
+    position: fixed;
+    bottom: 1em;
+    width: 248px;
+}
+
+.sidebar-profile-footer {
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--default-bgcolor);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.sidebar-selected-profile-footer {
+    background-color: rgba(var(--primary-color-rgb), 1);
+    color: var(--default-bgcolor);
+}
+
+.sidebar-selected-profile-footer .admin-sub-text {
+    color: var(--default-bgcolor) !important;
+}
+
+.profile-icon {
+    font-size: 20px;
+}
+
+.sidebar-profile-footer .admin-text {
+    font-size: 0.85em;
+}
+
+.sidebar-profile-footer .admin-sub-text {
+    font-size: 0.8em;
+    color: rgba(var(--dark-color-rgb), 0.5);
+}
+
+.sidebar-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0.5em 0;
+    justify-content: center;
+}
+
+.sidebar-logo-container {
+    align-items: center;
+}
+
+.sidebar-logo-container img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.sidebar-footer-text {
+    color: rgba(var(--dark-color-rgb), 0.5);
+    font-size: 13px;
+    font-kerning: normal;
+    letter-spacing: 0.05rem;
+    bottom: 0;
+}
+
+.sidebar-menu-list {
+    height: calc(100vh - 50px);
+    overflow: auto;
+}
+
+.selected-menu-list,
+.selected-menu-list:hover {
+    background-color: rgba(var(--primary-color-rgb), 1) !important;
+    color: var(--default-bgcolor) !important;
+}
+
+.menu-name,
+.async-tree-menu-list-arrow-container {
+    font-size: 1.1em !important;
+    font-weight: 600 !important;
+}
+
+.sidebar-middle {
+    height: calc(100vh - 250px);
+    overflow: auto;
+    padding: 0 0.5em;
+}
+
+.sidebar-middle .menu-list {
+    display: flex;
+    align-items: unset;
+    gap: 10px;
+    margin-top: 0.5em;
+    padding: 0.2em 2em;
+    cursor: pointer;
+    border-radius: 8px;
+    color: rgba(var(--dark-color-rgb), 0.65);
+    transition: all 0.3s ease;
+}
+
+.sidebar-middle .menu-list:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.05);
+}
+
+.sidebar-middle .menu-icon {
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    font-size: var(--primary-fontsize) !important;
+    gap: 5px;
+    width: 100% !important;
+    color: var(--sidebar-title-color);
+}
+
+.sidebar-title-text {
+    font-size: 20px;
+}
+
+.sidebar-logout-footer {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.logout-icon {
+    font-size: 1.2em;
+}
+
+.sidebar-asyn-menu .async-tree-menu-list {
+    color: rgba(var(--dark-color-rgb), 0.5);
+}
+
+.sidebar-asyn-menu .async-tree-menu-list:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.05);
+}
+
+.async-tree-menu-selected-list {
+    color: var(--primary-color);
+    border-right: 3px solid var(--primary-color);
+}
+
+.async-tree-menu-selected-list:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.05);
+}
+
+.async-tree-menu-selected-list:active {
+    background-color: rgba(var(--dark-color-rgb), 0.05);
+} */
+
+.sidebar-menu-container {
+    background-color: rgba(var(--dark-color-rgb), 0.05);
+}
+
+.sidebar-profile-footer {
+    background-color: var(--default-bgcolor);
+    transition: all 0.3s ease;
+}
+
+.sidebar-profile-footer:hover {
+    background-color: var(--primary-bgcolor);
+    color: var(--default-bgcolor);
+}
+
+.sidebar-profile-footer:hover .admin-sub-text {
+    color: var(--default-bgcolor);
+}
+
+.sidebar-selected-profile-footer {
+    background-color: rgba(var(--primary-color-rgb), 1);
+    color: var(--default-bgcolor);
+}
+
+.sidebar-profile-footer .admin-sub-text {
+    color: rgba(var(--dark-color-rgb), 0.5);
+}
+
+.sidebar-selected-profile-footer .admin-sub-text {
+    color: var(--default-bgcolor) !important;
+}
+
+.sidebar-logout-footer {
+    color: var(--primary-color);
+}
+
+.menu-list {
+    color: rgba(var(--dark-color-rgb), 0.65);
+    transition: all 0.3s ease;
+}
+
+.menu-list:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.05);
+}
+
+.selected-menu-list,
+.selected-menu-list:hover {
+    background-color: rgba(var(--primary-color-rgb), 1) !important;
+    color: var(--default-bgcolor) !important;
+}
+
+.sidebar-drawer .mantine-Drawer-content,
+.sidebar-drawer .mantine-Drawer-header {
+    background-color: rgb(245, 242, 242) !important;
+}
+
+.upload-accordion .mantine-Accordion-item {
+    border-color: rgba(var(--dark-color-rgb), 0.05) !important;
+}

@@ -1,0 +1,69 @@
+:root {
+    /** Themed color configuration */
+
+    --body-bgcolor-rgb: 245, 247, 251;
+
+    --primary-color: rgb(15, 69, 140);
+    --primary-color-rgb: 15, 69, 140;
+    /* login btn bgcolor ,accordion section header bgcolor,
+    filled btn (with hover) bgcolor & outlined hover bgcolor,
+    dropdown list hover color, */
+
+    --secondary-color: rgb(67, 175, 247);
+    --secondary-color-rgb: 67, 175, 247;
+    /* dropdown hover bgcolor */
+
+    --light-gray-bg: rgb(202, 202, 202);
+    --light-gray-text: rgb(255, 255, 255);
+
+    --default-color: rgb(255, 255, 255);
+    --default-color-rgb: 255, 255, 255;
+    /* left Menu text, selected list, footer text,
+     dropdown bgcolor ,loginpage & loginbox bgcolor,
+     topbar bgcolor*/
+
+    --dark-color: rgb(0, 0, 0);
+    --dark-color-rgb: 0, 0, 0;
+    /* topbar text color , form label & data color, dropdown color,
+    copyrights color, login input TextField color & bgcolor*/
+
+    --disabled-color: rgb(128, 128, 128);
+    --disabled-color-rgb: 128, 128, 128;
+    /* disabled btn color & bgcolor , subheader color,
+    Drawer header color*/
+
+    --sidebar-bgcolor-rgb: 34, 44, 60;
+    --sidebar-text-color-rgb: var(--default-color-rgb);
+    /* sidebar background color */
+
+    /** Standard color configuration */
+    --info-color: rgb(85, 162, 250);
+    --warning-color: rgb(255, 204, 0);
+    --error-color: rgba(245, 22, 22, 0.692);
+    --success-color: rgb(46, 199, 110);
+    --stroke-color: rgb(255, 255, 255);
+    
+
+    --orange-color:rgb(233, 108, 59);
+    --orange-color-rgb:233, 108, 59;
+
+    --pink-color:rgb(232, 97, 140);
+    --pink-color-rgb:232, 97, 140;
+    --green-color:rgb(34, 204, 178);
+    --green-color-rgb:34, 204, 178;
+    --blue-color:rgb(15, 69, 140);
+    --blue-color-rgb:15, 69, 140;
+
+    --page-box-shadow: rgba(0, 0, 0, 0.03) 0px 6px 24px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;
+    
+    --fs-sm:0.8em;
+    --fs-sm-x1:0.85em;
+    --fs-md:1em;
+    --fs-md-x1:1.2em;
+    --fs-md-x2:1.3em;
+    --fs-md-x3:1.5em;
+    --fs-lg:2em;
+    --fs-lg-x1:2.5em;
+    --fs-lg-x2:3em;
+    /** Themed color configuration ends*/
+}

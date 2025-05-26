@@ -1,0 +1,114 @@
+{
+  "authPage": {
+  "loginForm": {
+    "title": "Bon retour !",
+    "label": {
+      "email": "E-mail",
+      "pwd": "Mot de passe",
+      "button": "Connexion"
+    },
+    "footer": {
+      "signUpText": "Vous n'avez pas de compte ?",
+      "resetPwdText": "Mot de passe oublié",
+      "signUpLink": "S'inscrire",
+      "resetPwdLink": "Réinitialiser le mot de passe"
+    }
+  },
+  "signUpForm": {
+    "title": "Créer votre compte",
+    "label": {
+      "name": "Nom de l'entreprise",
+      "website": "Site Web de l'entreprise / URL LinkedIn",
+      "email": "E-mail",
+      "mobile": "Mobile",
+      "button": "S'inscrire"
+    },
+    "footer": {
+      "loginText": "Vous avez déjà un compte ?",
+      "loginLink": "Connexion"
+    }
+  },
+  "resetPwdForm": {
+    "title": "Réinitialiser le mot de passe",
+    "label": {
+      "code": "Code de vérification par e-mail",
+      "pwd": "Entrer le mot de passe",
+      "rePwd": "Ressaisir le mot de passe",
+      "button": "Réinitialiser"
+    },
+    "footer": {
+      "signUpText": "Vous n'avez pas de compte ?",
+      "signUpLink": "S'inscrire"
+    }
+  },
+  "authVerifyForm": {
+    "title": "Vérifiez votre compte",
+    "label": {
+      "code": "Code de vérification",
+      "pwd": "Entrer le mot de passe",
+      "rePwd": "Ressaisir le mot de passe",
+      "button": "Vérifier"
+    },
+    "footer": {
+      "loginText": "Vous avez déjà un compte ?",
+      "loginLink": "Connexion"
+    }
+  }
+},
+
+  "flexiPlan": {
+    "cards": [
+      {
+        "title": "Starter",
+        "plan": "$0",
+        "subText": "Recruteurs solo ou essais",
+        "features": [
+          { "name": "1 Compte Recruteur" },
+          { "name": "2 Offres d'emploi" },
+          { "name": "Évaluation Basique" },
+          { "name": "10 Évaluations de Candidats" },
+          { "name": "Analytique Basique" }
+        ]
+      },
+      {
+        "title": "Pro Recruteur",
+        "plan": "$59",
+        "subText": "Recruteurs solo ou essais",
+        "features": [
+          { "name": "2 Comptes Recruteur" },
+          { "name": "5 Offres d'emploi" },
+          { "name": "Évaluation Avancée" },
+          { "name": "50 Évaluations de Candidats" },
+          { "name": "Analytique Avancée" },
+          { "name": "Évaluations Personnalisables" }
+        ]
+      },
+      {
+        "title": "Suite Talent",
+        "plan": "$99",
+        "subText": "Parfait pour les Collaborateurs",
+        "features": [
+          { "name": "5 Comptes Recruteur" },
+          { "name": "10 Offres d'emploi" },
+          { "name": "Évaluation Avancée" },
+          { "name": "100 Évaluations de Candidats" },
+          { "name": "Analytique Avancée" },
+          { "name": "Évaluations Personnalisables" }
+        ]
+      },
+      {
+        "title": "Entreprise Plus",
+        "plan": "Personnalisé",
+        "subText": "Parfait pour les Organisations",
+        "features": [
+          { "name": "Comptes Recruteur Illimités" },
+          { "name": "Offres d'emploi Illimitées" },
+          { "name": "Évaluation Avancée" },
+          { "name": "Évaluations de Candidats Illimitées" },
+          { "name": "Analytique Avancée" },
+          { "name": "Évaluations Personnalisables" }
+        ]
+      }
+    ]
+  }
+}

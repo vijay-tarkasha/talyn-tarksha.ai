@@ -1,0 +1,15 @@
+.breadcrumb-container {
+    padding: 0 0 0em 0.2em;
+}
+.breadcrumb-anchor{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.mantine-Breadcrumbs-breadcrumb {
+    color: rgba(var(--dark-color-rgb), 0.65);
+}
+
+.mantine-Breadcrumbs-breadcrumb:hover {
+    color: rgba(var(--primary-color-rgb), 0.85);
+}

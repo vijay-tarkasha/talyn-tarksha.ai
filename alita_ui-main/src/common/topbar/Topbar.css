@@ -1,0 +1,83 @@
+.topbar {
+  background-color: white !important;
+  color: var(--topbar-color) !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--border-color);
+  width: calc(100%) !important;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.outlet-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.topbar-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: end;
+}
+
+.profile-menu-list-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-menu-list-container li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.profile-menu-list-container li:hover {
+  background-color: var(--dropdown-list-hover-bgcolor);
+  border-radius: 5px;
+}
+
+.task-product-name-container {
+  text-transform: capitalize;
+  font-size: 18px;
+  color: var(--accent-btn-text-color);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.scan-result-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scan-result-label {
+  color: rgba(var(--dark-color-rgb), 0.65);
+}
+
+.react-qr-scanner svg {
+  display: none;
+}
+
+.alert-text .mantine-Alert-message {
+  color: red !important;
+}

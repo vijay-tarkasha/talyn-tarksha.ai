@@ -1,0 +1,162 @@
+.py-field-group-container {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 50px;
+    transition: all 0.3s ease !important;
+}
+
+.py-field-group-container-1columns .py-form-field-container {
+    width: calc(100%);
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.py-field-group-container-2columns .py-form-field-container {
+    width: calc(50% - 26px);
+}
+
+.py-field-group-container-2columns .py-form-field-container-2colspan {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.py-field-group-container-2columns .py-form-field-container-2colspan .py-form-field-label {
+    width: 20%;
+}
+
+.py-field-group-container-2columns .py-form-field-container-2colspan .py-form-field-data {
+    width: 80%;
+}
+
+.py-field-group-container-3columns .py-form-field-container {
+    width: calc(33% - 0px);
+}
+
+.py-field-group-container-3columns .py-form-field-container-2colspan {
+    width: 67%;
+    padding: 10px 20px 10px 20px;
+}
+
+.py-field-group-container-3columns .py-form-field-container-2colspan .py-form-field-label {
+    width: 19%;
+}
+
+.py-field-group-container-3columns .py-form-field-container-2colspan .py-form-field-data {
+    width: 81%;
+}
+
+.py-field-group-container-3columns .py-form-field-container-3colspan {
+    width: 100%;
+    padding: 10px 25px 10px 20px;
+}
+
+.py-field-group-container-3columns .py-form-field-container-3colspan .py-form-field-label {
+    width: 13%;
+}
+
+.py-field-group-container-3columns .py-form-field-container-3colspan .py-form-field-data {
+    width: 90%;
+}
+
+.py-field-group-container-4columns .py-form-field-container {
+    width: calc(25% - 5px);
+}
+
+.py-field-group-container-4columns .py-form-field-container-2colspan {
+    width: 50%;
+    padding: 10px 20px 10px 20px;
+}
+
+.py-field-group-container-4columns .py-form-field-container-2colspan .py-form-field-label {
+    width: 19%;
+}
+
+.py-field-group-container-4columns .py-form-field-container-2colspan .py-form-field-data {
+    width: 81%;
+}
+
+.py-field-group-container-4columns .py-form-field-container-3colspan {
+    width: 80%;
+    padding: 10px 95px 10px 20px;
+}
+
+.py-field-group-container-4columns .py-form-field-container-3colspan .py-form-field-label {
+    width: 13%;
+}
+
+.py-field-group-container-4columns .py-form-field-container-3colspan .py-form-field-data {
+    width: 90%;
+}
+
+.py-field-group-container-4columns .py-form-field-container-4colspan {
+    width: 100%;
+    padding: 10px 30px 10px 20px;
+}
+
+.py-field-group-container-4columns .py-form-field-container-4colspan .py-form-field-label {
+    width: 10%;
+}
+
+.py-field-group-container-4columns .py-form-field-container-4colspan .py-form-field-data {
+    width: 95%;
+}
+
+.py-field-group-container-5columns .py-form-field-container {
+    width: calc(20% - 5px);
+}
+
+.py-field-group-container-5columns .py-form-field-container-2colspan {
+    width: 50%;
+    padding: 10px 20px 10px 20px;
+}
+
+.py-field-group-container-5columns .py-form-field-container-2colspan .py-form-field-label {
+    width: 19%;
+}
+
+.py-field-group-container-5columns .py-form-field-container-2colspan .py-form-field-data {
+    width: 81%;
+}
+
+.py-field-group-container-5columns .py-form-field-container-3colspan {
+    width: 80%;
+    padding: 10px 95px 10px 20px;
+}
+
+.py-field-group-container-5columns .py-form-field-container-3colspan .py-form-field-label {
+    width: 13%;
+}
+
+.py-field-group-container-5columns .py-form-field-container-3colspan .py-form-field-data {
+    width: 90%;
+}
+
+.py-field-group-container-5columns .py-form-field-container-4colspan {
+    width: 100%;
+    padding: 10px 30px 10px 20px;
+}
+
+.py-field-group-container-5columns .py-form-field-container-4colspan .py-form-field-label {
+    width: 10%;
+}
+
+.py-field-group-container-5columns .py-form-field-container-4colspan .py-form-field-data {
+    width: 95%;
+}
+
+.py-form-field-container-2column {
+    width: calc(50% - 30px) !important;
+}
+
+.py-form-field-container-3column {
+    width: calc(33% - 30px) !important;
+}
+
+.py-form-field-container-4column {
+    width: calc(25% - 30px) !important;
+}
+
+.py-form-field-container-5column {
+    width: calc(20% - 30px) !important;
+}

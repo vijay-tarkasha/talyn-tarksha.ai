@@ -1,0 +1,401 @@
+.h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    display: none;
+}
+
+.candidate-card .py-selectable-pagination-left-container .py-selectable-pagination-left-content-container {
+    font-size: 12px !important;
+}
+
+.py-selectable-pagination-left-content-container {
+    font-size: 14px;
+}
+
+.py-selectable-pagination-select-field .mantine-Select-root {
+    width: 60px;
+}
+
+.py-selectable-pagination-select-field>div {
+    width: 60px !important;
+}
+
+/* .py-field-group-container py-field-group-container-2columns */
+.py-field-group-container .py-field-group-container-2columns {
+    gap: 0 50px !important;
+}
+
+.py-grid-data-row-even {
+    background-color: rgb(250, 250, 250);
+}
+
+.py-grid-data-row:hover {
+    background-color: rgb(252, 252, 252);
+}
+
+.py-grid-data-row:active {
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+}
+
+.py-data-grid-table {
+    border-radius: 8px;
+}
+
+.py-grid-data-row {
+    border: none;
+}
+
+.py-field-group-container-2columns .py-form-field-container {
+    width: calc(50% - 30px);
+}
+
+.py-field-group-container .py-field-group-container-2columns .py-form-field-container .py-form-field-data .py-form-field-container-2colspan {
+    width: 100% !important;
+}
+
+
+.mantine-Button-label {
+    white-space: inherit;
+}
+
+.py-dataGrid-header-text span {
+    cursor: pointer;
+}
+
+.mantine-Modal-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.mantine-InputWrapper-label {
+    font-weight: 600;
+    color: rgba(var(--dark-color-rgb), 0.75);
+    font-size: 1em;
+}
+
+.grid {
+    margin-left: 10px;
+}
+
+.grid .user-icon {
+    font-size: 1.5rem;
+    align-self: flex-start;
+    color: var(--pink-color);
+}
+
+.grid-action-icon {
+    font-size: 1.3em;
+    color: rgba(var(--dark-bgcolor-rgb), 0.5);
+}
+
+.m_326d024a:where([data-active]) {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 13px;
+}
+
+.m_326d024a:where([data-active]):hover {
+    background-color: var(--primary-color);
+    border-radius: 13px;
+}
+
+:where([data-mantine-color-scheme="light"]) .m_326d024a {
+    border: none;
+}
+
+/* --button css-- */
+.button-icon {
+    font-size: 16px;
+    margin-left: 0px !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+}
+
+.filled-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    text-transform: none !important;
+    background-color: var(--primary-color) !important;
+    cursor: pointer;
+}
+
+.remove-filled-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    text-transform: none !important;
+    background-color: var(--pink-color) !important;
+    cursor: pointer;
+}
+
+.cancel-li-filled-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: none !important;
+    background-color: rgba(var(--primary-color-rgb), 0.1) !important;
+    color: var(--primary-color) !important;
+}
+
+.py-cancel-filled-button,
+.cancel-filled-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: none !important;
+    background-color: var(--cancel-btn-bgcolor) !important;
+    color: var(--cancel-btn-color) !important;
+}
+
+.back-oulined-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    border: 1px solid var(--pink-color) !important;
+    cursor: pointer;
+    color: var(--pink-color) !important;
+    background-color: var(--default-color) !important;
+    text-transform: none !important;
+}
+
+.back-filled-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: var(--primary-color) !important;
+    text-transform: none !important;
+}
+
+.cancel-oulined-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    border: 1px solid var(--pink-color) !important;
+    cursor: pointer;
+    color: var(--pink-color) !important;
+    background-color: var(--default-color) !important;
+    text-transform: none !important;
+}
+
+.py-action-button {
+    border-radius: 5px;
+}
+
+.py-action-button,
+.py-action-button:hover,
+.py-filter-button,
+.py-filter-button:hover {
+    background-color: rgba(var(--primary-color-rgb), 1);
+}
+
+.py-dropdown-button,
+.py-dropdown-button:hover {
+    background-color: var(--default-bgcolor);
+    color: rgba(var(--dark-bgcolor-rgb), 1);
+    border: 1px solid var(--border-color) !important;
+}
+
+.py-reset-button,
+.py-reset-button:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    color: rgba(var(--primary-color-rgb), 1);
+}
+
+.grid-page-container {
+    padding: 1em;
+    margin-top: 0.1em;
+    box-shadow: var(--page-box-shadow);
+    border-radius: 10px;
+}
+
+.py-selectable-pagination-container {
+    margin-top: 10px;
+}
+
+.text-view-value-filled {
+    background-color: #f3f4f6;
+    color: #000c;
+}
+
+.text-view-value-filled,
+.text-view-value-outlined {
+    margin-top: 10px;
+    width: 100%;
+    margin-left: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 10px;
+}
+
+/* --reset pwd-- */
+.dialog-warn-icon {
+    font-size: 28px !important;
+    margin-left: 0px !important;
+    vertical-align: middle !important;
+    color: var(--orange-color);
+}
+
+.dialog-confirm-text {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reset-pwd-dialog .dialog-header-text {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.reset-pwd-form-container {
+    margin-top: 0px;
+}
+
+.dialog-form-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 30px;
+    text-align: center;
+    padding: 0 0.5em 1em 0;
+}
+
+/* --form css-- */
+.form-header-sticky-container,
+.form-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 0 1em 0; */
+}
+
+.form-header-sticky-container {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    background-color: white;
+}
+
+.form-header-text {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.form-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: end;
+}
+
+/* --auth logo-- */
+
+
+.sidebar-header .auth-logo {
+    height: 80px;
+}
+
+.auth-logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* --page not found-- */
+
+.page-not-found-container {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 250px;
+}
+
+.page-not-found-container .btn-container {
+    margin-top: 1em;
+}
+
+.error-404 {
+    font-size: 3.5vw;
+    color: rgba(var(--dark-bgcolor-rgb), 0.35);
+}
+
+.error-404-text {
+    font-size: 1.5vw;
+    color: rgba(var(--dark-bgcolor-rgb), 0.55);
+}
+
+/* disabled mantine field color change */
+.m_8fb7ebe7:disabled,
+.m_8fb7ebe7[data-disabled] {
+    color: var(--dark-color-rgb);
+}
+
+.m_8f816625 {
+    word-break: break-word;
+}
+
+/* ---page-- */
+.page-footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0em 1em;
+    bottom: 0;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--default-bgcolor);
+    margin: 0 auto;
+    min-height: 50px;
+    z-index: 9;
+}
+
+.page-content-container {
+    height: calc(100vh - 110px);
+    overflow: auto;
+    padding: 0em 0.2em;
+    margin-top: 1em;
+}
+
+.page-ch-content-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.page-right-left-container {
+    width: 100%;
+    max-width: calc((100vw) * 0.8);
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    padding-bottom: 1em;
+}
+
+.m_92253aa5:where([data-combo-box-selected]) {
+    background-color: rgba(var(--primary-color-rgb), 1) !important;
+    color: white !important;
+}

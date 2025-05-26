@@ -1,0 +1,30 @@
+.candidate-card-wrapper .card-wrapper {
+    display: block !important;
+}
+
+.candidate-card .py-selectable-pagination-container {
+    display: block;
+}
+
+.candidate-card .py-selectable-pagination-left-container,
+.candidate-card .py-selectable-pagination-right-container {
+    width: 100%;
+    padding-left: 5px;
+    display: grid;
+    place-items: center;
+    margin-top: 10px;
+}
+
+.candidate-modal {
+    --modal-size: 70%;
+}
+
+.percentage-field {
+    background-color: rgba(var(--secondary-color-rgb), 0.09);
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.candidate-edit-container .header-icon {
+    color: var(--pink-color)
+}

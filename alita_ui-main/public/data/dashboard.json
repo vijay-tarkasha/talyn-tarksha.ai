@@ -1,0 +1,88 @@
+{
+    "result": {
+        "one": {
+            "ar": 5,
+            "upl": 4,
+            "scr": 20,
+            "arch": 35,
+            "month": "Jan"
+        },
+        "two": {
+            "ar": 10,
+            "upl": 3,
+            "scr": 20,
+            "arch": 3,
+            "month": "Feb"
+        },
+        "three": {
+            "ar": 6,
+            "upl": 6,
+            "scr": 35,
+            "arch": 20,
+            "month": "Mar"
+        },
+        "four": {
+            "ar": 20,
+            "upl": 8,
+            "scr": 60,
+            "arch": 14,
+            "month": "Apr"
+        },
+        "five": {
+            "ar": 18,
+            "upl": 26,
+            "scr": 3,
+            "arch": 15,
+            "month": "May"
+        },
+        "six": {
+            "ar": 27,
+            "upl": 8,
+            "scr": 56,
+            "arch": 1,
+            "month": "June"
+        },
+        "seven": {
+            "ar": 10,
+            "upl": 40,
+            "scr":9,
+            "arch": 40,
+            "month": "July"
+        },
+        "eight": {
+            "ar": 35,
+            "upl": 22,
+            "scr":43,
+            "arch": 2,
+            "month": "Aug"
+        },
+        "ninen": {
+            "ar": 40,
+            "upl": 13,
+            "scr":5,
+            "arch": 4,
+            "month": "sept"
+        },
+        "ten": {
+            "ar": 30,
+            "upl": 19,
+            "scr" :33,
+            "arch": 1,
+            "month": "oct"
+        },
+        "leven": {
+            "ar": 10,
+            "upl": 40,
+            "scr":21,
+            "arch": 5,
+            "month": "Nov"
+        },
+        "twelve": {
+            "ar": 5,
+            "upl": 3,
+            "arch": 40,
+            "scr" :54,
+            "month": "Dec"
+        }
+    }
+}

@@ -1,0 +1,264 @@
+body {
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    display: none;
+}
+
+.mantine-Modal-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.candidate-card .py-selectable-pagination-left-container .py-selectable-pagination-left-content-container {
+    font-size: 12px !important;
+}
+
+.py-selectable-pagination-left-content-container {
+    font-size: 14px;
+}
+
+.py-selectable-pagination-select-field>div {
+    width: 60px !important;
+}
+
+.py-selectable-pagination-container {
+    margin-top: 10px;
+}
+
+.grid .user-icon {
+    font-size: 1.5rem;
+    align-self: flex-start;
+    color: var(--pink-color);
+}
+
+.grid-action-icon {
+    font-size: 1.3em;
+    color: rgba(var(--dark-bgcolor-rgb), 0.5);
+}
+
+.m_326d024a:where([data-active]) {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 13px;
+}
+
+.m_326d024a:where([data-active]):hover {
+    background-color: var(--primary-color);
+    border-radius: 13px;
+}
+
+:where([data-mantine-color-scheme="light"]) .m_326d024a {
+    border: none;
+}
+
+.page-footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0em 1em;
+    bottom: 0;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--default-bgcolor);
+    margin: 0 auto;
+    min-height: 50px;
+    z-index: 9;
+}
+
+/* --button css-- */
+.button-icon {
+    font-size: 16px;
+    margin-left: 0px !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+}
+
+.filled-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    text-transform: none !important;
+    background-color: var(--primary-color) !important;
+    cursor: pointer;
+}
+
+.filled-button:active,
+.py-action-button:active {
+    background-color: rgba(var(--primary-color-rgb), 1) !important;
+}
+
+.remove-filled-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    text-transform: none !important;
+    background-color: var(--pink-color) !important;
+    cursor: pointer;
+}
+
+.cancel-li-filled-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: none !important;
+    background-color: rgba(var(--primary-color-rgb), 0.1) !important;
+    color: var(--primary-color) !important;
+}
+
+.py-cancel-filled-button,
+.cancel-filled-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: none !important;
+    background-color: var(--cancel-btn-bgcolor) !important;
+    color: var(--cancel-btn-color) !important;
+}
+
+.text-view-value-filled {
+    margin-top: 0px !important;
+    min-height: 36px !important;
+    background-color: #f3f4f6 !important;
+    color: #000c !important;
+    width: 100%;
+    margin-left: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 10px;
+}
+
+.back-oulined-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    border: 1px solid var(--pink-color) !important;
+    cursor: pointer;
+    color: var(--pink-color) !important;
+    background-color: var(--default-color) !important;
+    text-transform: none !important;
+}
+
+.back-filled-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: var(--primary-color) !important;
+    text-transform: none !important;
+}
+
+.cancel-oulined-button {
+    border-radius: 5px !important;
+    gap: 5px !important;
+    font-size: 14px;
+    border: 1px solid var(--pink-color) !important;
+    cursor: pointer;
+    color: var(--pink-color) !important;
+    background-color: var(--default-color) !important;
+    text-transform: none !important;
+}
+
+.py-action-button {
+    border-radius: 5px;
+}
+
+.py-action-button,
+.py-action-button:hover,
+.py-filter-button,
+.py-filter-button:hover {
+    background-color: rgba(var(--primary-color-rgb), 1);
+}
+
+.py-dropdown-button,
+.py-dropdown-button:hover {
+    background-color: var(--default-bgcolor);
+    color: rgba(var(--dark-bgcolor-rgb), 1);
+    border: 1px solid var(--border-color) !important;
+}
+
+.py-reset-button,
+.py-reset-button:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    color: rgba(var(--primary-color-rgb), 1);
+}
+
+.page-content-container {
+    height: calc(100vh - 110px);
+    overflow: auto;
+    padding: 0em 0.2em;
+    margin-top: 1em;
+}
+
+.page-right-left-container {
+    width: 100%;
+    max-width: calc((100vw) * 0.6);
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    padding-bottom: 1em;
+}
+
+.dialog-warn-icon {
+    color: var(--orange-color);
+}
+
+.m_92253aa5:where([data-combobox-selected]) {
+    background-color: rgba(var(--primary-color-rgb), 1) !important;
+}
+
+.mantine-Pagination-control {
+    font-size: 13px !important;
+    padding: 0 !important;
+    height: 25px !important;
+    min-width: 25px !important;
+    border-radius: 10px !important;
+}
+
+/* .mantine-Button-label, */
+/* .mantine-Button-root {
+} */
+
+.mantine-Button-label {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+}
+
+.button-switch .mantine-Button-root {
+    min-height: 55px;
+}
+
+.profile_lg {
+    height: 80px;
+    width: 80px;
+    font-size: 30px;
+}
+
+.profile_md {
+    height: 47px;
+    width: 47px;
+    font-size: 20px;
+}
+
+.profile_normal {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+}
+
+.profile_sm {
+    height: 25px;
+    width: 25px;
+    font-size: 12px;
+}
+
+pre {
+    font-family: unset;
+}

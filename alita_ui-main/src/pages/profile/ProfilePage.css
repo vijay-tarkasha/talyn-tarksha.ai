@@ -1,0 +1,38 @@
+.profile-form-switch-fields {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 1em;
+    padding: 0 0.5em 0 1em;
+    width: 100%;
+    gap: 30px;
+}
+
+.profile-avathar-container,
+.profile-avathar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-avathar {
+    width: 50%;
+}
+
+.profile-avathar-img {
+    height: 100px;
+    width: 100px;
+}
+
+.profile-avathar-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.profile-avathar-text {
+    font-size: 1.2em;
+    font-weight: 600;
+}

@@ -1,0 +1,6 @@
+.bill-icon {
+    color: var(--primary-color);
+}
+.section-subtitle {
+    color: rgba(var(--dark-color-rgb), 0.5);
+}

@@ -1,0 +1,146 @@
+.job-form-container {
+    padding: 1em;
+    margin-top: 0.1em;
+    border-radius: 10px;
+}
+
+.job-form-lookup-fields,
+.job-form-switch-fields,
+.job-form-title-fields {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.job-edit-form-lookup-fields,
+.job-edit-form-switch-fields,
+.job-edit-form-title-fields {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.job-switch-field {
+    width: 100%;
+}
+
+.job-form-options {
+    width: 100%
+}
+
+.job-form-img-container {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.job-form-img-field {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    position: relative;
+}
+
+.job-form-img-field img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.job-form-container {
+    padding-bottom: 2em;
+}
+
+.job-form-container .py-form-field-container {
+    padding: 10px 10px 10px 0;
+}
+
+.job-input {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.job-edit-input {
+    margin-top: 10px;
+    font-weight: 500;
+    padding: 0 1em 0 1em;
+}
+
+.img-delete-icon-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.img-action-icon {
+    font-size: 1.3em;
+    color: rgba(var(--dark-bgcolor-rgb), 0.5);
+}
+
+/* edit form */
+
+.job-edit-container {
+    margin: 0px 15px 0px 15px;
+    max-height: calc(100vh - 150px);
+    position: relative;
+    overflow-y: auto;
+}
+
+.job-edit-container .header-icon {
+    font-size: 50px;
+    color: var(--pink-color)
+}
+
+.job-edit-container .sub-header-text {
+    font-size: 14px;
+    color: rgba(var(--dark-color-rgb), 0.5);
+}
+
+.job-edit-container .header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.job-edit-container .header-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.job-edit-container .icon-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 70%;
+}
+
+.job-edit-container .form-field {
+    width: 50%;
+}
+
+/* -- loading -- */
+.loading-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: slideIn 0.6s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
