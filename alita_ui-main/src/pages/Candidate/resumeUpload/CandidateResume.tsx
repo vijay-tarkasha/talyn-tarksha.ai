@@ -1,17 +1,13 @@
 import { Box, Button, Loader, Modal, Text } from "@mantine/core";
-// import { StringFormat, topic } from "@palmyralabs/ts-utils";
 import { useRef, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { useTranslation } from "react-i18next";
 import { FaUpload } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { SlCloudUpload } from "react-icons/sl";
-// import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import DocxFileImg from "../../../../public/images/docx.png";
 import FileImg from "../../../../public/images/pdfi.png";
-// import { ServiceEndpoint } from "../../../config/ServiceEndpoints";
-// import { useTenantFormStore } from "../../../wire/AppStoreFactory";
 import "./CandidateResume.css";
 import { ISaveForm } from "@palmyralabs/rt-forms";
 
@@ -25,22 +21,14 @@ interface IResumeProps {
 const CandidateResume = ({
   fileList,
   setFileList,
-}: // formRef,
-//   pageName,
+}: 
 IResumeProps) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const { t } = useTranslation();
-  // const navigate = useNavigate();
   const btnTexts: any = t("buttonLabels", { returnObjects: true });
   const candidatesTexts: any = t("candidates", { returnObjects: true });
-  const errorTexts: any = t("toastMsg", { returnObjects: true });
-  // const formData = formRef?.current?.getData();
-  // const endpoint = StringFormat(ServiceEndpoint.candidate.upload, {
-  //   id: formData?.title?.id,
-  // });
-  //
-  // const store = useTenantFormStore(endpoint);
+  const errorTexts: any = t("toastMsg", { returnObjects: true });;
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop: (acceptedFiles: any) => {
@@ -63,13 +51,8 @@ IResumeProps) => {
       } else {
         toast.error(errorTexts?.fileDetect);
       }
-      // },
-      // maxFiles: 5,
-      // accept: {
-      //
-      // },
     },
-    maxFiles: 5,
+    maxFiles: 100,
     accept: {
       pdf: [".pdf"],
       docx: [".docx"],
@@ -91,69 +74,6 @@ IResumeProps) => {
     setFileList([]);
   };
   console.log(fileList);
-
-  // const onRefresh = () => {
-  //   topic.publish("uploadImg" + "/refresh", {});
-  // };
-
-  // const handleUploadImages = () => {
-  //   const jobTitle = formRef?.current?.getData()?.title;
-  //   if (jobTitle == "" || jobTitle == null) {
-  //     toast.error(errorTexts?.jobTitle);
-  //   } else {
-  //     if (fileList.length > 5) {
-  //       toast.error(errorTexts?.fileDetect);
-  //     } else {
-  //       // setLoading(true);
-  //       const formData = new FormData();
-  //       fileList.forEach((file: any) => {
-  //         formData.append(file.name, file);
-  //       });
-
-  //       store
-  //         .post(formData)
-  //         .then((d) => {
-  //           const filePassed = d?.result?.files_passed;
-  //           const fileErrored = d?.result?.files_errored;
-
-  //           if (filePassed && Array.isArray(filePassed)) {
-  //             filePassed.map((pass: any) => {
-  //               if (pass && pass.file_name && pass.status) {
-  //                 toast.success(
-  //                   `${pass.file_name} - ${JSON.stringify(pass.status)}`
-  //                 );
-  //                 navigate("../" + pageName);
-  //               }
-  //             });
-  //           }
-
-  //           if (fileErrored && Array.isArray(fileErrored)) {
-  //             fileErrored.map((error: any) => {
-  //               if (error && error.file_name && error.status) {
-  //                 toast.error(
-  //                   `${error.file_name} - ${JSON.stringify(error.status)}`
-  //                 );
-  //               }
-  //             });
-  //           }
-
-  //           setFileList([]);
-  //           onRefresh();
-  //         })
-  //         .catch((res) => {
-  //           if (
-  //             res &&
-  //             (res?.response?.status == 500 ||
-  //               [500, 404, "500", "404"].includes(
-  //                 res?.response?.data?.status_code
-  //               ))
-  //           )
-  //             toast.error(res?.response?.data?.message || errorTexts?.reqFail);
-  //           // setLoading(false);
-  //         });
-  //     }
-  //   }
-  // };
 
   const isBtnEnable = fileList.length > 0;
 
@@ -270,8 +190,6 @@ IResumeProps) => {
               </div>
               <div className="mt-3 md:mt-0 flex md:block item-center justify-center">
                 <Button
-                  // loading={loading}
-                  // loaderProps={{ type: "dots" }}
                   className="filled-button"
                   onClick={() => fileInputRef.current?.click()}
                   leftSection={<FaUpload className="button-icon" />}

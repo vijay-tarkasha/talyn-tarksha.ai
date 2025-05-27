@@ -3,125 +3,109 @@ import { ISaveForm, PalmyraForm } from "@palmyralabs/rt-forms";
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
+import { topic } from "@palmyralabs/ts-utils";
+import { ServiceEndpoint } from "../../config/ServiceEndpoints";
+import { useTenantFormStore } from "../../wire/AppStoreFactory";
+import { StringFormat } from "@palmyralabs/ts-utils";
 import CandidateEditPage from "./editpage/CandidateEditpage";
 import UploadedApplications from "../application/UploadedApplications";
 import CandidateResume from "./resumeUpload/CandidateResume";
 import CandidateCSV from "./resumeUpload/CandidateCSV";
+import { useNavigate } from "react-router-dom";
 
 interface IInput {
   pageName?: string;
 }
 
 const CandidateNewpage = (props: IInput) => {
-  const [fileList, setFileList] = useState<File[]>([]);
-  const [resumeType, setResumeType] = useState<"resumes" | "csv">("resumes");
-  const [loading, setLoading] = useState(false);
+  const [resumeType, setResumeType] = useState<"Resumes" | "CSV">("Resumes");
+  const [fileList, setFileList] = useState<any[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const navigate = useNavigate();
 
-  const formRef = useRef<any>(null);
+  const formRef = useRef<ISaveForm>(null);
   const { t } = useTranslation();
-
+  const [_isValid] = useState<boolean>(false);
+  const { t: tError } = useTranslation("toastMsg");
   const btnTexts: any = t("buttonLabels", { returnObjects: true });
   const candidatesTexts: any = t("candidates", { returnObjects: true });
 
-  const handleUploadResume = async (candidateId: number, file: File) => {
-    if (!candidateId) {
-      toast.error("Candidate ID is missing");
-      return;
-    }
+  const formdata = formRef.current?.getData();
+  console.log(formdata);
 
-    if (!file) {
-      toast.error("Please select a file to upload");
-      return;
-    }
+  const endpoint = StringFormat(ServiceEndpoint.candidate.upload, {
+    // id: formdata?.title?.id,
+    id: 2,
+  });
 
+  const store = useTenantFormStore(endpoint);
+
+  const onRefresh = () => {
+    topic.publish("uploadImg" + "/refresh", {});
+  };
+
+  const handleUploadImages = () => {
     setLoading(true);
-    const token = localStorage.getItem("token");
+    const formdata = new FormData();
+    fileList.forEach((file) => {
+      formdata.append(file.name, file);
+    });
 
-    if (!token) {
-      toast.error("User not authenticated");
-      setLoading(false);
-      return;
+    console.log("Uploading files", fileList);
+
+    console.log(formdata);
+    const mode = "formdata";
+    if (mode) {
+      formdata.append("mode", JSON.stringify(mode));
     }
+    console.log(mode);
 
-    const tenantUrl =
-      process.env.REACT_APP_TENANT_URL || "https://yourtenant.com";
-    const endpoint = `${tenantUrl}/candidates/${candidateId}/upload-resume/`;
+    store
+      .post(formdata)
+      .then((d) => {
+        console.log("Upload Response:", d);
+        const filePassed = d?.result?.files_passed;
+        const fileErrored = d?.result?.files_errored;
 
-    const formData = new FormData();
-    formData.append("resume", file);
-    formData.append("mode", "upload");
-    formData.append("type", "document");
-    formData.append("src", "candidate-portal");
+        if (filePassed && Array.isArray(filePassed)) {
+          filePassed.forEach((pass) => {
+            if (pass && pass.file_name && pass.status) {
+              toast.success(
+                `${pass.file_name} - ${JSON.stringify(pass.status)}`
+              );
+              // console.log(pass);
+            }
+          });
 
-    try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        body: formData,
-      });
+          navigate("../" + props.pageName);
+        }
 
-      const result = await response.json();
+        if (fileErrored && Array.isArray(fileErrored)) {
+          fileErrored.forEach((error) => {
+            if (error && error.file_name && error.status) {
+              toast.error(
+                `${error.file_name} - ${JSON.stringify(error.status)}`
+              );
+              // console.log(error);
+            }
+          });
+        }
 
-      if (response.ok) {
-        toast.success(result.message || "Resume uploaded successfully");
         setFileList([]);
-      } else {
-        toast.error(result.message || "Failed to upload resume");
-      }
-    } catch (error) {
-      console.error("Upload error:", error);
-      toast.error("Something went wrong during upload");
-    } finally {
-      setLoading(false);
-    }
+        onRefresh();
+        setLoading(false);
+      })
+      .catch((res) => {
+        if (
+          res &&
+          (res?.response?.status == 500 ||
+            [500, 404, "500", "404"].includes(res?.response?.data?.status_code))
+        )
+          //   toast.error(res?.response?.data?.message || errorTexts?.reqFail);
+          toast.error(res?.response?.data?.message || tError("reqFail"));
+        setLoading(false);
+      });
   };
-
-  
-  const onUploadClick = async () => {
-    try {
-      const response = await formRef.current?.save?.(); 
-      console.log("Save Response:", response);
-
-      const candidateId = response?.data?.candidateId;
-
-      if (!candidateId) {
-        toast.error("Candidate ID missing after save");
-        return;
-      }
-
-      if (fileList.length === 0) {
-        toast.error("Please select a file before upload");
-        return;
-      }
-
-      handleUploadResume(candidateId, fileList[0]);
-    } catch (err) {
-      console.error("Form save failed:", err);
-      toast.error("Form save failed. Please check inputs.");
-    }
-  };
-
-  // const onUploadClick = () => {
-  //   const formData = formRef.current?.getData();
-  //   console.log("Form Data:", formData);
-
-  //   const candidateId = formData?.candidateId;
-  //   console.log("candidateId Data:", candidateId);
-
-  //   if (!candidateId) {
-  //     toast.error("Please fill candidate details before upload");
-  //     return;
-  //   }
-
-  //   if (fileList.length === 0) {
-  //     toast.error("Please select a file before upload");
-  //     return;
-  //   }
-
-  //   handleUploadResume(candidateId, fileList[0]);
-  // };
 
   return (
     <div className="px-4 md:px-10">
@@ -133,13 +117,13 @@ const CandidateNewpage = (props: IInput) => {
         <PalmyraForm ref={formRef} onValidChange={() => {}}>
           <CandidateEditPage
             value={resumeType}
-            onChange={(val: string) => setResumeType(val as "resumes" | "csv")}
+            onChange={(val: string) => setResumeType(val as "Resumes" | "CSV")}
           />
         </PalmyraForm>
       </div>
 
       <div className="grid grid-cols-2 gap-10 mt-15 mb-4 px-30">
-        <div className="w-full mt-10">
+        <div className="w-full ">
           <UploadedApplications pageName={props.pageName} className="w-full" />
         </div>
 
@@ -149,13 +133,13 @@ const CandidateNewpage = (props: IInput) => {
               loading={loading}
               loaderProps={{ type: "dots" }}
               className="filled-button w-full"
-              onClick={onUploadClick}
+              onClick={handleUploadImages}
             >
               {btnTexts.submitCan}
             </Button>
           </div>
 
-          {resumeType === "resumes" ? (
+          {resumeType === "Resumes" ? (
             <CandidateResume
               fileList={fileList}
               setFileList={setFileList}

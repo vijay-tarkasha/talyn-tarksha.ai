@@ -12,7 +12,6 @@ import ImageDropZone from "./resumeUpload/ResumeDropZone";
 import { useTenantFormStore } from "../../wire/AppStoreFactory";
 import { StringFormat } from "@palmyralabs/ts-utils";
 import { useNavigate } from "react-router-dom";
-// import UploadedCandidates from "./UploadedApplications";
 
 interface IInput {
   formRef?: any;
