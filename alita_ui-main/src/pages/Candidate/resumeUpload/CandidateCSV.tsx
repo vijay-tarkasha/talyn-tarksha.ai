@@ -1,6 +1,6 @@
 import { Box, Button, Loader, Modal, Text } from "@mantine/core";
 // import { StringFormat, topic } from "@palmyralabs/ts-utils";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useDropzone } from "react-dropzone";
 import { useTranslation } from "react-i18next";
 import { FaUpload } from "react-icons/fa";
@@ -9,27 +9,24 @@ import { SlCloudUpload } from "react-icons/sl";
 import { toast } from "react-toastify";
 import FileImg from "../../../../public/images/pdfi.png";
 import "./CandidateResume.css";
-import { ISaveForm } from "@palmyralabs/rt-forms";
+// import { ISaveForm } from "@palmyralabs/rt-forms";
 
-interface IResumeProps {
+interface ICsvProps {
+  formRef?: any;
+  pageName?: any;
   fileList: any[];
   setFileList: React.Dispatch<React.SetStateAction<any[]>>;
-  formRef: React.RefObject<ISaveForm>;
-  pageName?: string;
+  loading: boolean;
 }
 
-const CandidateCSV = ({
-  fileList,
-  setFileList,
-}:
-IResumeProps) => {
+const CandidateCSV = (props: ICsvProps) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [loading, setLoading] = useState<boolean>(false);
+  // const [loading, setLoading] = useState<boolean>(false);
+  const { fileList, setFileList, loading } = props;
   const { t } = useTranslation();
   const btnTexts: any = t("buttonLabels", { returnObjects: true });
   const candidatesTexts: any = t("candidates", { returnObjects: true });
   const errorTexts: any = t("toastMsg", { returnObjects: true });
- 
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop: (acceptedFiles: any) => {
@@ -77,11 +74,9 @@ IResumeProps) => {
   };
   console.log(fileList);
 
-  
   const isBtnEnable = fileList.length > 0;
 
   const files: any = fileList.map((file: any, index: any) => {
-
     const getImage = (filePath: string) => {
       const fileExtension = filePath?.split(".").pop()?.toLowerCase() || "";
 

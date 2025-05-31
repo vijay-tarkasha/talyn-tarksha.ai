@@ -424,8 +424,9 @@
     "subTitle": "Uploaded Candidates",
     "info": "Candidate Info",
     "grid": {
-      "id": "Client",
+      "id": "id",
       "canName": "Candidate Name",
+      "location": "location",
       "last": "Last Updated Date",
       "date": "Date",
       "resume": "Resume Overview",
@@ -436,7 +437,7 @@
       "img": {
         "upload": "Upload Files",
         "drop": "Drop files here",
-        "format": "Supported format: PNG, JPG",
+        "format": "Supported format: PDF,PNG,JPG",
         "format1": "Supported format: XLSX,CSV ",
         "or": "OR",
         "browse": "Browse Files"

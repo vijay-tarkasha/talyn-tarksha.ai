@@ -1,7 +1,7 @@
 import { Button } from "@mantine/core";
 import {
   ExportDataButton,
-  FilterButton,
+  // FilterButton,
   IDataGridDefaultControlConfig,
   QuickSearch,
 } from "@palmyralabs/rt-forms-mantine";
@@ -33,7 +33,7 @@ const TalynSummaryGridControls = (props: any) => {
         />
       )}
       {/* <TextInput placeholder="Search" leftSection={<GoSearch color="black" />} /> */}
-      <FilterButton {...o} />
+      {/* <FilterButton {...o} /> */}
       
       {pluginOptions.export?.visible && (
         <ExportDataButton

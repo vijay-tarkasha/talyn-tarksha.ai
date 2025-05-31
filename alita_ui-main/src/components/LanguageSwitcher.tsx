@@ -30,12 +30,24 @@ const LanguageSwitcher: React.FC = () => {
           defaultValue={savedLanguage}
           attribute="language"
           onChange={(value: any) => changeLanguage(value)}
-          options={{ en: "English", ta: "தமிழ்", hi: "हिन्दी" }}
+          className="text-sm font-semibold text-gray-300"
+          options={{
+            en: "English",
+            ta: "தமிழ்",
+            hi: "हिन्दी",
+            te: "తెలుగు ",
+            ma:"മലയാളം",
+            ka:"ಕನ್ನಡ ",
+            mar:"मराठी",
+            gu:"ગુજરાતી",
+            fr: "French",
+          }}
           rightSection={
             <IoIosArrowDown
               className={`cursor-pointer transition-transform duration-300 ${
                 open ? "rotate-180" : "rotate-0"
               }`}
+              
             />
           }
           onDropdownOpen={() => setOpen(true)}

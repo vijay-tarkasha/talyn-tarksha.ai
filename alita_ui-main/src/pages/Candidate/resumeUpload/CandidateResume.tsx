@@ -1,5 +1,5 @@
 import { Box, Button, Loader, Modal, Text } from "@mantine/core";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useDropzone } from "react-dropzone";
 import { useTranslation } from "react-i18next";
 import { FaUpload } from "react-icons/fa";
@@ -9,26 +9,23 @@ import { toast } from "react-toastify";
 import DocxFileImg from "../../../../public/images/docx.png";
 import FileImg from "../../../../public/images/pdfi.png";
 import "./CandidateResume.css";
-import { ISaveForm } from "@palmyralabs/rt-forms";
+// import { ISaveForm } from "@palmyralabs/rt-forms";
 
 interface IResumeProps {
+  formRef?: any;
+  pageName?: any;
   fileList: any[];
   setFileList: React.Dispatch<React.SetStateAction<any[]>>;
-  formRef: React.RefObject<ISaveForm>;
-  pageName?: string;
+  loading: boolean;
 }
 
-const CandidateResume = ({
-  fileList,
-  setFileList,
-}: 
-IResumeProps) => {
+const CandidateResume = (props: IResumeProps) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [loading, setLoading] = useState<boolean>(false);
+  const { fileList, setFileList, loading } = props;
   const { t } = useTranslation();
   const btnTexts: any = t("buttonLabels", { returnObjects: true });
   const candidatesTexts: any = t("candidates", { returnObjects: true });
-  const errorTexts: any = t("toastMsg", { returnObjects: true });;
+  const errorTexts: any = t("toastMsg", { returnObjects: true });
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop: (acceptedFiles: any) => {

@@ -38,7 +38,7 @@ const ServiceEndpoint = {
         restApi: 'candidates',
         byId: 'candidates/{id}/',
         upload: 'candidates/{id}/upload-resume/',
-    },
+    },
     application: {
         restApi: 'applications',
         byId: 'application/{id}/',

@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import { topic } from "@palmyralabs/ts-utils";
 import { ServiceEndpoint } from "../../config/ServiceEndpoints";
 import { useTenantFormStore } from "../../wire/AppStoreFactory";
-import { StringFormat } from "@palmyralabs/ts-utils";
+// import { StringFormat } from "@palmyralabs/ts-utils";
 import CandidateEditPage from "./editpage/CandidateEditpage";
 import UploadedApplications from "../application/UploadedApplications";
 import CandidateResume from "./resumeUpload/CandidateResume";
@@ -14,29 +14,33 @@ import CandidateCSV from "./resumeUpload/CandidateCSV";
 import { useNavigate } from "react-router-dom";
 
 interface IInput {
-  pageName?: string;
+  pageName?: any;
 }
 
 const CandidateNewpage = (props: IInput) => {
-  const [resumeType, setResumeType] = useState<"Resumes" | "CSV">("Resumes");
+  const [resumeType, setResumeType] = useState<"Resume" | "CSV">("Resume");
   const [fileList, setFileList] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const navigate = useNavigate();
-
-  const formRef = useRef<ISaveForm>(null);
   const { t } = useTranslation();
+  const errorTexts: any = t("toastMsg", { returnObjects: true });
+  const formRef = useRef<ISaveForm>(null);
   const [_isValid] = useState<boolean>(false);
-  const { t: tError } = useTranslation("toastMsg");
+  // const { t: tError } = useTranslation("toastMsg");
   const btnTexts: any = t("buttonLabels", { returnObjects: true });
   const candidatesTexts: any = t("candidates", { returnObjects: true });
 
   const formdata = formRef.current?.getData();
   console.log(formdata);
 
-  const endpoint = StringFormat(ServiceEndpoint.candidate.upload, {
-    // id: formdata?.title?.id,
-    id: 2,
-  });
+  const endpoint = ServiceEndpoint.candidate.restApi
+    // id: 4,
+    // id: formdata?.id,
+
+  // const csvEndpoint = ServiceEndpoint.candidate.restApi;
+
+  // const storeResume = useTenantFormStore(resumeEndpoint);
+  // const storeCSV = useTenantFormStore(csvEndpoint);
 
   const store = useTenantFormStore(endpoint);
 
@@ -44,67 +48,277 @@ const CandidateNewpage = (props: IInput) => {
     topic.publish("uploadImg" + "/refresh", {});
   };
 
+  // const handleUploadImages = () => {
+  //   setLoading(true);
+  //   const formdata = new FormData();
+  //   fileList.forEach((file) => {
+  //     formdata.append(file.name, file);
+  //   });
+
+  //   console.log("Uploading files", fileList);
+
+  //   console.log(formdata);
+  //   const mode = "formdata";
+  //   if (mode) {
+  //     formdata.append("mode", JSON.stringify(mode));
+  //   }
+  //   console.log(mode);
+
+  //   store
+  //     .post(formdata)
+  //     .then((d) => {
+  //       console.log("Upload Response:", d);
+  //       const filePassed = d?.result?.files_passed;
+  //       const fileErrored = d?.result?.files_errored;
+
+  //       if (filePassed && Array.isArray(filePassed)) {
+  //         filePassed.forEach((pass) => {
+  //           if (pass && pass.file_name && pass.status) {
+  //             toast.success(
+  //               `${pass.file_name} - ${JSON.stringify(pass.status)}`
+  //             );
+  //             // console.log(pass);
+  //           }
+  //         });
+
+  //         navigate("../" + props.pageName);
+  //       }
+
+  //       if (fileErrored && Array.isArray(fileErrored)) {
+  //         fileErrored.forEach((error) => {
+  //           if (error && error.file_name && error.status) {
+  //             toast.error(
+  //               `${error.file_name} - ${JSON.stringify(error.status)}`
+  //             );
+  //             // console.log(error);
+  //           }
+  //         });
+  //       }
+
+  //       setFileList([]);
+  //       onRefresh();
+  //       setLoading(false);
+  //     })
+  //     .catch((res) => {
+  //       if (
+  //         res &&
+  //         (res?.response?.status == 500 ||
+  //           [500, 404, "500", "404"].includes(res?.response?.data?.status_code))
+  //       )
+  //         //   toast.error(res?.response?.data?.message || errorTexts?.reqFail);
+  //         toast.error(res?.response?.data?.message || tError("reqFail"));
+  //       setLoading(false);
+  //     });
+  // };
+
+  // const handleUploadImages = () => {
+  //   setLoading(true);
+  //   const formdata = new FormData();
+  //   fileList.forEach((file) => {
+  //     formdata.append("file", file);
+  //     // formdata.append("CSV", file);
+  //   });
+
+  //   if (resumeType == "Resume") {
+  //     console.log(formdata);
+  //     console.log(storeResume);
+  //     storeResume
+  //       .post(formdata)
+  //       .then((d) => {
+  //         // console.log("Upload Response:", d);
+  //         const filePassed = d?.result?.files_passed;
+  //         const fileErrored = d?.result?.files_errored;
+
+  //         if (filePassed && Array.isArray(filePassed)) {
+  //           filePassed.forEach((pass) => {
+  //             if (pass && pass.file_name && pass.status) {
+  //               toast.success(
+  //                 `${pass.file_name} - ${JSON.stringify(pass.status)}`
+  //               );
+  //             }
+  //           });
+  //           navigate("../" + props.pageName);
+  //         }
+  //         if (fileErrored && Array.isArray(fileErrored)) {
+  //           fileErrored.forEach((error) => {
+  //             if (error && error.file_name && error.status) {
+  //               toast.error(
+  //                 `${error.file_name} - ${JSON.stringify(error.status)}`
+  //               );
+  //             }
+  //           });
+  //         }
+  //         setFileList([]);
+  //         onRefresh();
+  //         setLoading(false);
+  //       })
+  //       .catch((res) => {
+  //         console.log(res);
+  //         setLoading(false);
+  //         if (
+  //           res &&
+  //           (res?.response?.status == 500 ||
+  //             [500, 404, 400, "500", "404", "400"].includes(
+  //               res?.response?.data?.status_code
+  //             ))
+  //         ) {
+  //           toast.error(res?.response?.data?.message || errorTexts?.reqFail);
+  //           toast.error(res?.response?.data?.message || tError("reqFail"));
+  //         }
+  //       });
+  //   } else {
+  //     storeCSV
+  //       .post(formdata)
+  //       .then((d) => {
+  //         const filePassed = d?.result?.files_passed;
+  //         const fileErrored = d?.result?.files_errored;
+
+  //         if (filePassed && Array.isArray(filePassed)) {
+  //           filePassed.forEach((pass) => {
+  //             if (pass && pass.file_name && pass.status) {
+  //               toast.success(
+  //                 `${pass.file_name} - ${JSON.stringify(pass.status)}`
+  //               );
+  //             }
+  //           });
+
+  //           navigate("../" + props.pageName);
+  //         }
+
+  //         if (fileErrored && Array.isArray(fileErrored)) {
+  //           fileErrored.forEach((error) => {
+  //             if (error && error.file_name && error.status) {
+  //               toast.error(
+  //                 `${error.file_name} - ${JSON.stringify(error.status)}`
+  //               );
+  //             }
+  //           });
+  //         }
+
+  //         setFileList([]);
+  //         onRefresh();
+  //         setLoading(false);
+  //       })
+  //       .catch((res) => {
+  //         if (
+  //           res &&
+  //           (res?.response?.status == 500 ||
+  //             [500, 404, 400, "500", "404", "400"].includes(
+  //               res?.response?.data?.status_code
+  //             ))
+  //         ) {
+  //           // toast.error(res?.response?.data?.message || errorTexts?.reqFail);
+  //           toast.error(res?.response?.data?.message || tError("reqFail"));
+  //         }
+  //         setLoading(false);
+  //       });
+  //   }
+  // };
+
   const handleUploadImages = () => {
     setLoading(true);
     const formdata = new FormData();
+
     fileList.forEach((file) => {
-      formdata.append(file.name, file);
+      formdata.append("file", file); // Resume upload key
     });
 
-    console.log("Uploading files", fileList);
+      // console.log(storeResume);
+      store
+        .post(formdata)
+        .then((d) => {
+          const filePassed = d?.result?.files_passed;
+          const fileErrored = d?.result?.files_errored;
 
-    console.log(formdata);
-    const mode = "formdata";
-    if (mode) {
-      formdata.append("mode", JSON.stringify(mode));
-    }
-    console.log(mode);
+          if (filePassed && Array.isArray(filePassed)) {
+            filePassed.forEach((pass) => {
+              if (pass && pass.file_name && pass.status) {
+                toast.success(
+                  `${pass.file_name} - ${JSON.stringify(pass.status)}`
+                );
+              }
+            });
+            navigate("../" + props.pageName);
+          }
+          if (fileErrored && Array.isArray(fileErrored)) {
+            fileErrored.forEach((error) => {
+              if (error && error.file_name && error.status) {
+                toast.error(
+                  `${error.file_name} - ${JSON.stringify(error.status)}`
+                );
+              }
+            });
+          }
+          setFileList([]);
+          onRefresh();
+          setLoading(false);
+        })
+        .catch((res) => {
+          console.log(res);
+          setLoading(false);
+          if (
+            res &&
+            (res?.response?.status == 500 ||
+              [500, 404, 400, "500", "404", "400"].includes(
+                res?.response?.data?.status_code
+              ))
+          ) {
+            toast.error(res?.response?.data?.message || errorTexts?.reqFail);
+            // toast.error(res?.response?.data?.message || tError("reqFail"));
+          }
+        });
+        
+    // } else {
+    //   store
+    //     .post(formdata)
+    //     .then((d) => {
+    //       const filePassed = d?.result?.files_passed;
+    //       const fileErrored = d?.result?.files_errored;
 
-    store
-      .post(formdata)
-      .then((d) => {
-        console.log("Upload Response:", d);
-        const filePassed = d?.result?.files_passed;
-        const fileErrored = d?.result?.files_errored;
+    //       if (
+    //         filePassed &&
+    //         Array.isArray(filePassed) &&
+    //         filePassed.length > 0
+    //       ) {
+    //         filePassed.forEach((pass) => {
+    //           if (pass && pass.file_name && pass.status) {
+    //             toast.success(
+    //               `${pass.file_name} - ${JSON.stringify(pass.status)}`
+    //             );
+    //           }
+    //         });
 
-        if (filePassed && Array.isArray(filePassed)) {
-          filePassed.forEach((pass) => {
-            if (pass && pass.file_name && pass.status) {
-              toast.success(
-                `${pass.file_name} - ${JSON.stringify(pass.status)}`
-              );
-              // console.log(pass);
-            }
-          });
+    //         navigate("../" + props.pageName);
+    //       }
 
-          navigate("../" + props.pageName);
-        }
+    //       if (fileErrored && Array.isArray(fileErrored)) {
+    //         fileErrored.forEach((error) => {
+    //           if (error && error.file_name && error.status) {
+    //             toast.error(
+    //               `${error.file_name} - ${JSON.stringify(error.status)}`
+    //             );
+    //           }
+    //         });
+    //       }
 
-        if (fileErrored && Array.isArray(fileErrored)) {
-          fileErrored.forEach((error) => {
-            if (error && error.file_name && error.status) {
-              toast.error(
-                `${error.file_name} - ${JSON.stringify(error.status)}`
-              );
-              // console.log(error);
-            }
-          });
-        }
-
-        setFileList([]);
-        onRefresh();
-        setLoading(false);
-      })
-      .catch((res) => {
-        if (
-          res &&
-          (res?.response?.status == 500 ||
-            [500, 404, "500", "404"].includes(res?.response?.data?.status_code))
-        )
-          //   toast.error(res?.response?.data?.message || errorTexts?.reqFail);
-          toast.error(res?.response?.data?.message || tError("reqFail"));
-        setLoading(false);
-      });
+        //   setFileList([]);
+        //   onRefresh();
+        //   setLoading(false);
+        // })
+        // .catch((res) => {
+        //   if (
+        //     res &&
+        //     (res?.response?.status == 500 ||
+        //       [500, 404, 400, "500", "404", "400"].includes(
+        //         res?.response?.data?.status_code
+        //       ))
+        //   ) {
+        //     toast.error(res?.response?.data?.message || errorTexts?.reqFail);
+        //     // toast.error(res?.response?.data?.message || tError("reqFail"));
+        //   }
+        //   setLoading(false);
+        // });
+    
   };
 
   return (
@@ -117,14 +331,17 @@ const CandidateNewpage = (props: IInput) => {
         <PalmyraForm ref={formRef} onValidChange={() => {}}>
           <CandidateEditPage
             value={resumeType}
-            onChange={(val: string) => setResumeType(val as "Resumes" | "CSV")}
+            onChange={(val: string) => setResumeType(val as "Resume" | "CSV")}
           />
         </PalmyraForm>
       </div>
 
-      <div className="grid grid-cols-2 gap-10 mt-15 mb-4 px-30">
+      <div className="grid grid-cols-2 gap-10 mt-15 mb-4 px-30 rounded-lg shadow-lg pb-10">
         <div className="w-full ">
-          <UploadedApplications pageName={props.pageName} className="w-full" />
+          <UploadedApplications
+            pageName={props.pageName}
+            customTitle={candidatesTexts?.subTitle}
+          />
         </div>
 
         <div className="flex flex-col gap-6">
@@ -139,12 +356,13 @@ const CandidateNewpage = (props: IInput) => {
             </Button>
           </div>
 
-          {resumeType === "Resumes" ? (
+          {resumeType === "Resume" ? (
             <CandidateResume
               fileList={fileList}
               setFileList={setFileList}
               formRef={formRef}
               pageName={props.pageName}
+              loading={loading}
             />
           ) : (
             <CandidateCSV
@@ -152,6 +370,7 @@ const CandidateNewpage = (props: IInput) => {
               setFileList={setFileList}
               formRef={formRef}
               pageName={props.pageName}
+              loading={loading}
             />
           )}
         </div>

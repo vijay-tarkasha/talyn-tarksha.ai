@@ -24,11 +24,15 @@ class TalynGridStore extends PalmyraAbstractStore implements GridStore<any> {
             params: urlSortParams, headers: {
             }
         };
+        console.log(request)
 
         const transform = (d: any) => {
+            console.log(d);
+            
             const offset = (d.current_page - 1) * d.page_size;
             return { result: d.results, total: d.count, offset, limit: d.page_size }
         }
+        
 
         return this.isUrlValid(url) || this.getClient().get(url, params)
             .then(response => onResult(transform(response.data.result)))

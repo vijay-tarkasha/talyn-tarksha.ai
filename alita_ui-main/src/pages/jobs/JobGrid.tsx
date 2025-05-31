@@ -1,4 +1,4 @@
-import { Modal } from "@mantine/core";
+// import { Modal } from "@mantine/core";
 import {
   CellGetter,
   ColumnDefinition,
@@ -50,6 +50,7 @@ const JobGrid = (_props: IPageInput) => {
       type: "string",
       width: "50px",
       cellRenderer: roleIdRenderer,
+      quickSearch: true,
     },
     {
       attribute: "job_title",
@@ -141,7 +142,11 @@ const JobGrid = (_props: IPageInput) => {
   };
 
   const getPluginOptions = (): any => {
-    return { customAddText: btnTexts.job.cJob, filter: true };
+    return {
+      customAddText: btnTexts.job.cJob,
+      filter: true,
+      quickSearch: true,
+    };
   };
 
   const newRecord = () => {
@@ -170,6 +175,7 @@ const JobGrid = (_props: IPageInput) => {
         customizer={gridCustomizer}
         title={jobTexts?.title}
         ref={gridRef}
+        quickSearch="roleId"
         getPluginOptions={getPluginOptions}
         endPoint={endPoint}
         onRowClick={rowClick}
@@ -181,22 +187,33 @@ const JobGrid = (_props: IPageInput) => {
         )}
       />
 
-      <Modal
+      {/* <Modal
         opened={dialogOpen}
         onClose={onClose}
         centered
         className="candidate-modal"
         title={jobTexts?.edit?.title}
         transitionProps={{ transition: "fade", duration: 200 }}
-      >
-        {/* <JobEditPage /> */}
-        <JobUpdatePage
+      > */}
+      {/* <JobEditPage /> */}
+      {/* <JobUpdatePage
           dialogRef={dialogFormRef}
           data={data}
           dialogOpen={dialogOpen}
           onClose={onClose}
-        />
-      </Modal>
+        /> */}
+      {/* </Modal> */}
+
+      {dialogOpen && (
+        <div className="mt-6 bg-white">
+          <JobUpdatePage
+            dialogRef={dialogFormRef}
+            data={data}
+            dialogOpen={dialogOpen}
+            onClose={onClose}
+          />
+        </div>
+      )}
 
       <DeleteConfirmDialog
         data={data?.job_title}

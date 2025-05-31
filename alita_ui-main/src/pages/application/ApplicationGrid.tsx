@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-// import { Modal } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { PalmyraGrid } from "@palmyralabs/rt-forms-mantine";
 import { ColumnDefinition, IPageQueryable } from "@palmyralabs/rt-forms";
@@ -10,7 +9,7 @@ import ProfileImage from "../../components/widget/ProfileImage";
 import { ServiceEndpoint } from "../../config/ServiceEndpoints";
 import { ApplicationStatusColor } from "./StatusColor";
 import ApplicationEditPage from "./editPage/ApplicationEditPage";
-// import CandidateEditPage from "./editPage/ApplicationEditPage";
+
 
 interface IApplicationGridInput {
   pageName?: string;
@@ -75,6 +74,7 @@ const ApplicationGrid = (_props: IApplicationGridInput) => {
       label: applicationTexts.grid.canName,
       type: "string",
       sortable: false,
+      quickSearch: true,
     },
     // {
     //   attribute: "location",
@@ -120,6 +120,7 @@ const ApplicationGrid = (_props: IApplicationGridInput) => {
     return {
       customAddText: btnTexts.application.upApp,
       filter: false,
+      quickSearch: true,
     };
   };
 
@@ -148,6 +149,7 @@ const ApplicationGrid = (_props: IApplicationGridInput) => {
         title={applicationTexts.title}
         pageSize={[10, 20, 30]}
         ref={gridRef}
+        quickSearch="name"
         getPluginOptions={getPluginOptions}
         onRowClick={handleRowClick}
         endPoint={apiEndPoint}

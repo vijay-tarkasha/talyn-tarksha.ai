@@ -136,10 +136,11 @@ class PalmyraAbstractStore {
             const order = sortOrder[field] === "asc" ? "+" : "-";
             return order + field;
         });
+        // console.log(queryParams)
 
         const limit = queryParams.limit || 15;
         const _f = queryParams.filter || {};
-
+        console.log(_f)
         const _offset = queryParams.offset || 0;
 
         const page: number = Math.floor(_offset / limit) + 1;

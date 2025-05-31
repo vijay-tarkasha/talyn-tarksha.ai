@@ -1,12 +1,12 @@
 import { Select } from "../../../template/mantineForm";
 
 interface IProps {
-  value: "Resumes" | "CSV";
-  onChange: (val: "Resumes" | "CSV") => void;
+  value: "Resume" | "CSV";
+  onChange: (val: "Resume" | "CSV") => void;
 }
 
 const CandidateEditPage = ({ value, onChange }: IProps) => {
-  const options = value === "Resumes" ? { CSV: "CSV" } : { Resumes: "Resumes" };
+  const options = value === "Resume" ? { CSV: "CSV" } : { Resume: "Resume" };
 
   return (
     <div className="w-full md:w-48">
@@ -14,7 +14,7 @@ const CandidateEditPage = ({ value, onChange }: IProps) => {
         attribute="resumeType"
         placeholder={value}
         value={value}
-        onChange={(val) => onChange((val ?? "Resumes") as "Resumes" | "CSV")}
+        onChange={(val) => onChange((val ?? "Resume") as "Resume" | "CSV")}
         options={options}
         nothingFoundMessage={"--No data available--"}
         className="w-full font-semibold"
