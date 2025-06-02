@@ -10,7 +10,6 @@ import { ServiceEndpoint } from "../../config/ServiceEndpoints";
 import { ApplicationStatusColor } from "./StatusColor";
 import ApplicationEditPage from "./editPage/ApplicationEditPage";
 
-
 interface IApplicationGridInput {
   pageName?: string;
 }
@@ -66,15 +65,16 @@ const ApplicationGrid = (_props: IApplicationGridInput) => {
       name: "job_title",
       label: applicationTexts.grid.name,
       type: "string",
-      sortable: false,
+      // sortable: true,
     },
     {
       attribute: "name",
       name: "candidateName",
       label: applicationTexts.grid.canName,
       type: "string",
-      sortable: false,
+      // sortable: true,
       quickSearch: true,
+      searchable: true,
     },
     // {
     //   attribute: "location",
@@ -91,7 +91,7 @@ const ApplicationGrid = (_props: IApplicationGridInput) => {
       displayPattern: "MMM DD",
       type: "date",
       width: "50px",
-      sortable: false,
+      // sortable: false,
     },
     {
       attribute: "resumeOverview",
@@ -119,8 +119,9 @@ const ApplicationGrid = (_props: IApplicationGridInput) => {
   const getPluginOptions = (): any => {
     return {
       customAddText: btnTexts.application.upApp,
-      filter: false,
+      filter: true,
       quickSearch: true,
+      searchable: true,
     };
   };
 

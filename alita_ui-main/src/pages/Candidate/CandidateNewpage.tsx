@@ -33,9 +33,9 @@ const CandidateNewpage = (props: IInput) => {
   const formdata = formRef.current?.getData();
   console.log(formdata);
 
-  const endpoint = ServiceEndpoint.candidate.restApi
-    // id: 4,
-    // id: formdata?.id,
+  const endpoint = ServiceEndpoint.candidate.restApi;
+  // id: 4,
+  // id: formdata?.id,
 
   // const csvEndpoint = ServiceEndpoint.candidate.restApi;
 
@@ -223,101 +223,53 @@ const CandidateNewpage = (props: IInput) => {
       formdata.append("file", file); // Resume upload key
     });
 
-      // console.log(storeResume);
-      store
-        .post(formdata)
-        .then((d) => {
-          const filePassed = d?.result?.files_passed;
-          const fileErrored = d?.result?.files_errored;
+    // console.log(storeResume);
+    store
+      .post(formdata)
+      .then((d) => {
+        console.log("Upload response", d);
 
-          if (filePassed && Array.isArray(filePassed)) {
-            filePassed.forEach((pass) => {
-              if (pass && pass.file_name && pass.status) {
-                toast.success(
-                  `${pass.file_name} - ${JSON.stringify(pass.status)}`
-                );
-              }
-            });
-            navigate("../" + props.pageName);
-          }
-          if (fileErrored && Array.isArray(fileErrored)) {
-            fileErrored.forEach((error) => {
-              if (error && error.file_name && error.status) {
-                toast.error(
-                  `${error.file_name} - ${JSON.stringify(error.status)}`
-                );
-              }
-            });
-          }
-          setFileList([]);
-          onRefresh();
-          setLoading(false);
-        })
-        .catch((res) => {
-          console.log(res);
-          setLoading(false);
-          if (
-            res &&
-            (res?.response?.status == 500 ||
-              [500, 404, 400, "500", "404", "400"].includes(
-                res?.response?.data?.status_code
-              ))
-          ) {
-            toast.error(res?.response?.data?.message || errorTexts?.reqFail);
-            // toast.error(res?.response?.data?.message || tError("reqFail"));
-          }
-        });
-        
-    // } else {
-    //   store
-    //     .post(formdata)
-    //     .then((d) => {
-    //       const filePassed = d?.result?.files_passed;
-    //       const fileErrored = d?.result?.files_errored;
+        const filePassed = d?.message?.files_passed;
+        const fileErrored = d?.message?.files_errored;
 
-    //       if (
-    //         filePassed &&
-    //         Array.isArray(filePassed) &&
-    //         filePassed.length > 0
-    //       ) {
-    //         filePassed.forEach((pass) => {
-    //           if (pass && pass.file_name && pass.status) {
-    //             toast.success(
-    //               `${pass.file_name} - ${JSON.stringify(pass.status)}`
-    //             );
-    //           }
-    //         });
+        if (filePassed && Array.isArray(filePassed)) {
+          filePassed.forEach((pass) => {
+            if (pass && pass.file_name && pass.status) {
+              toast.success(
+                `${pass.file_name} - ${JSON.stringify(pass.status)}`
+              );
+            }
+          });
+          navigate("../" + props.pageName);
+        }
+        if (fileErrored && Array.isArray(fileErrored)) {
+          fileErrored.forEach((error) => {
+            if (error && error.file_name && error.status) {
+              toast.error(
+                `${error.file_name} - ${JSON.stringify(error.status)}`
+              );
+            }
+          });
+        }
+        setFileList([]);
+        onRefresh();
+        setLoading(false);
+      })
+      .catch((res) => {
+        console.log(res);
+        setLoading(false);
+        if (
+          res &&
+          (res?.response?.status == 500 ||
+            [500, 404, 400, "500", "404", "400"].includes(
+              res?.response?.data?.status_code
+            ))
+        ) {
+          toast.error(res?.response?.data?.message || errorTexts?.reqFail);
+          // toast.error(res?.response?.data?.message || tError("reqFail"));
+        }
+      });
 
-    //         navigate("../" + props.pageName);
-    //       }
-
-    //       if (fileErrored && Array.isArray(fileErrored)) {
-    //         fileErrored.forEach((error) => {
-    //           if (error && error.file_name && error.status) {
-    //             toast.error(
-    //               `${error.file_name} - ${JSON.stringify(error.status)}`
-    //             );
-    //           }
-    //         });
-    //       }
-
-        //   setFileList([]);
-        //   onRefresh();
-        //   setLoading(false);
-        // })
-        // .catch((res) => {
-        //   if (
-        //     res &&
-        //     (res?.response?.status == 500 ||
-        //       [500, 404, 400, "500", "404", "400"].includes(
-        //         res?.response?.data?.status_code
-        //       ))
-        //   ) {
-        //     toast.error(res?.response?.data?.message || errorTexts?.reqFail);
-        //     // toast.error(res?.response?.data?.message || tError("reqFail"));
-        //   }
-        //   setLoading(false);
-        // });
     
   };
 

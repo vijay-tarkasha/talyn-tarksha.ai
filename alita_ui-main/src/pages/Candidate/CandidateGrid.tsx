@@ -13,7 +13,7 @@ import { TalynSummaryGridControls } from "../../components/dataControl/TalynSumm
 import { ServiceEndpoint } from "../../config/ServiceEndpoints";
 import { ApplicationStatusColor } from "../application/StatusColor";
 import ProfileImage from "../../components/widget/ProfileImage";
-import ApplicationEditPage from "../application/editPage/ApplicationEditPage";
+import CandidateId from "./editpage/CandidateId";
 // import { TextField } from "../../template/mantineForm";
 // import CandidateEditPage from "./editpage/CandidateEditpage";
 // import ProfileImage from "../../components/widget/ProfileImage";
@@ -84,7 +84,8 @@ const CandidateGrid = (_props: ICandidateGridInput) => {
       label: candidatesTexts.grid.canName,
       type: "string",
       quickSearch: true,
-      // sortable: false,
+      searchable: true,
+      // sortable: true,
     },
 
     {
@@ -92,7 +93,7 @@ const CandidateGrid = (_props: ICandidateGridInput) => {
       name: "location",
       label: candidatesTexts.grid.location,
       type: "string",
-      // sortable: false,
+      // sortable: true,
     },
     {
       attribute: "created_on",
@@ -102,7 +103,7 @@ const CandidateGrid = (_props: ICandidateGridInput) => {
       displayPattern: "MMM DD",
       type: "date",
       width: "50px",
-      // sortable: false,
+      // sortable: true,
     },
     {
       attribute: "updated_on",
@@ -112,7 +113,7 @@ const CandidateGrid = (_props: ICandidateGridInput) => {
       displayPattern: "MMM DD",
       type: "date",
       width: "100px",
-      // sortable: false,
+      // sortable: true,
     },
     {
       attribute: "resume_overview",
@@ -140,7 +141,8 @@ const CandidateGrid = (_props: ICandidateGridInput) => {
   const getPluginOptions = (): any => {
     return {
       customAddText: btnTexts.candidate.upCan,
-      filter: false,
+      filter: true,
+      searchable: true,
       quickSearch: true,
     };
   };
@@ -187,7 +189,7 @@ const CandidateGrid = (_props: ICandidateGridInput) => {
 
         {opened && (
           <div className="mt-6 bg-white">
-            <ApplicationEditPage
+            <CandidateId
               close={close}
               id={data?.id}
               onRefresh={onRefresh}

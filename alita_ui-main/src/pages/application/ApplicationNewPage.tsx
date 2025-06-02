@@ -78,8 +78,8 @@ const ApplicationNewPage = (props: IInput) => {
       .post(formData)
       .then((d) => {
         console.log("Upload Response:", d);
-        const filePassed = d?.result?.files_passed;
-        const fileErrored = d?.result?.files_errored;
+        const filePassed = d?.message?.files_passed;
+        const fileErrored = d?.message?.files_errored;
 
         if (filePassed && Array.isArray(filePassed)) {
           filePassed.forEach((pass) => {

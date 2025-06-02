@@ -41,13 +41,14 @@ const UserGrid = (_props: IUserGridInput) => {
       label: usersTexts.grid.id,
       type: "string",
       cellRenderer: clientRenderer,
-      quickSearch: true,
     },
     {
       attribute: "email",
       name: "email",
       label: usersTexts.grid.email,
       type: "string",
+      quickSearch: true,
+      searchable: true,
     },
     {
       attribute: "company_name",
@@ -77,7 +78,12 @@ const UserGrid = (_props: IUserGridInput) => {
 
   const apiEndPoint = ServiceEndpoint.user.restApi;
   const getPluginOptions = (): any => {
-    return { customAddText: btnTexts?.user?.create, quickSearch: true };
+    return {
+      customAddText: btnTexts?.user?.create,
+      filter: true,
+      quickSearch: true,
+      searchable: true,
+    };
   };
 
   const newRecord = () => {
@@ -98,7 +104,7 @@ const UserGrid = (_props: IUserGridInput) => {
         title={usersTexts.grid.title}
         pageSize={[10, 20, 30]}
         ref={gridRef}
-        quickSearch="id"
+        quickSearch="email"
         getPluginOptions={getPluginOptions}
         endPoint={apiEndPoint}
         DataGridControlProps={{ newRecord }}

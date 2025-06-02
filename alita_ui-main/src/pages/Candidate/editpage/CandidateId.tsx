@@ -20,7 +20,7 @@ import {
   TextField,
 } from "../../../template/mantineForm";
 import { useTenantFormStore } from "../../../wire/AppStoreFactory";
-import "../ApplicationPageX.css";
+import "../../application/ApplicationPageX.css";
 
 interface IInput {
   id: any;
@@ -29,7 +29,7 @@ interface IInput {
   onRefresh?: any;
 }
 
-const ApplicationEditPage = (props: IInput) => {
+const CandidateId = (props: IInput) => {
   const { handle500Error } = useHandleError();
   const formRef = useRef<ISaveForm>(null);
   const [isValid, setValid] = useState<boolean>(false);
@@ -38,7 +38,7 @@ const ApplicationEditPage = (props: IInput) => {
   const applicationTexts: any = t("application", { returnObjects: true });
   const errorTexts: any = t("toastMsg", { returnObjects: true });
 
-  const endpoint = StringFormat(ServiceEndpoint.application.byId, {
+  const endpoint = StringFormat(ServiceEndpoint.candidate.byId, {
     id: props.id,
   });
   const jobStore = useTenantFormStore(endpoint);
@@ -91,11 +91,9 @@ const ApplicationEditPage = (props: IInput) => {
   const PreSave = (data: any) => {
     const req = {
       ...formRef?.current?.getData(),
-      jobPosting: data?.jobPosting?.id,
-      status: statusRef?.current?.getValue(),
-      candidate: data?.candidate?.id || data?.id,
+      jobPosting: data.jobPosting.id,
+      status: statusRef?.current.getValue(),
     };
-    console.log("Submitting to API:", req);
     return req;
   };
 
@@ -282,4 +280,4 @@ const ApplicationEditPage = (props: IInput) => {
   );
 };
 
-export default ApplicationEditPage;
+export default CandidateId;

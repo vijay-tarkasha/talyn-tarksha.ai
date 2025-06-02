@@ -51,6 +51,7 @@ const JobGrid = (_props: IPageInput) => {
       width: "50px",
       cellRenderer: roleIdRenderer,
       quickSearch: true,
+      searchable: true,
     },
     {
       attribute: "job_title",
@@ -73,7 +74,6 @@ const JobGrid = (_props: IPageInput) => {
       displayPattern: "DD MMM",
       width: "50px",
       type: "date",
-      searchable: true,
     },
     {
       attribute: "uploaded",
@@ -146,6 +146,7 @@ const JobGrid = (_props: IPageInput) => {
       customAddText: btnTexts.job.cJob,
       filter: true,
       quickSearch: true,
+      searchable: true,
     };
   };
 

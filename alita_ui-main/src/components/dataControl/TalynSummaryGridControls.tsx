@@ -1,16 +1,18 @@
 import { Button } from "@mantine/core";
 import {
   ExportDataButton,
-  // FilterButton,
+  FilterButton,
   IDataGridDefaultControlConfig,
   QuickSearch,
 } from "@palmyralabs/rt-forms-mantine";
 import { FaPlus } from "react-icons/fa";
+// import { GoSearch } from "react-icons/go";
 
 interface IGridControlOption extends IDataGridDefaultControlConfig {}
 interface IOptions extends IGridControlOption {
   onNewClick?: any;
   customAddText?: string;
+  filter?: boolean;
 }
 const TalynSummaryGridControls = (props: any) => {
   const { getPluginOptions, ...o } = props;
@@ -33,8 +35,8 @@ const TalynSummaryGridControls = (props: any) => {
         />
       )}
       {/* <TextInput placeholder="Search" leftSection={<GoSearch color="black" />} /> */}
-      {/* <FilterButton {...o} /> */}
-      
+      {pluginOptions.filter && <FilterButton {...o} />}
+
       {pluginOptions.export?.visible && (
         <ExportDataButton
           exportOption={{ csv: "CSV" }}
