@@ -111,7 +111,7 @@ const ResumeDropZone = ({ fileList, setFileList }: IInput) => {
 
   return (
     <>
-      <div className="mt-10">
+      <div className="">
         <div className="rounded-lg shadow-lg max-h-fit">
           <div className="px-10 py-5">
             <div className="items-center justify-between md:flex">

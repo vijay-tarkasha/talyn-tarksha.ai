@@ -174,7 +174,7 @@ const CandidateGrid = (_props: ICandidateGridInput) => {
           title={candidatesTexts.title}
           pageSize={[10, 20, 30]}
           ref={gridRef}
-          quickSearch="name"
+          quickSearch="search"
           getPluginOptions={getPluginOptions}
           onRowClick={handleRowClick}
           endPoint={apiEndPoint}

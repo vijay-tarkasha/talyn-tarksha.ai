@@ -536,7 +536,11 @@
   },
   "dashboard": {
     "title": "డాష్‌బోర్డ్",
-    "chartTitle": "సాంకేతిక వివరాలు"
+    "chartTitle": "సాంకేతిక వివరాలు",
+    "chartTitle1": "మొత్తం పనితీరు",
+    "chartTitle2": "ఉద్యోగ పనితీరు",
+    "chartTitle3": "మొత్తం ఎంపికలు",
+    "chartTitle4": "మొత్తం నిరాకరణలు"
   },
   "users": {
     "grid": {

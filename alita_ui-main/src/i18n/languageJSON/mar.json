@@ -536,7 +536,11 @@
   },
   "dashboard": {
     "title": "डॅशबोर्ड",
-    "chartTitle": "आकडेवारी"
+    "chartTitle": "आकडेवारी",
+    "chartTitle1": "एकूण कामगिरी",
+    "chartTitle2": "नोकरी कामगिरी",
+    "chartTitle3": "एकूण निवडी",
+    "chartTitle4": "एकूण नकार"
   },
   "users": {
     "grid": {

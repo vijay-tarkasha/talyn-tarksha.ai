@@ -536,7 +536,11 @@
   },
   "dashboard": {
     "title": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
-    "chartTitle": "ಆಂಕೆಗಳು"
+    "chartTitle": "ಆಂಕೆಗಳು",
+    "chartTitle1": "ಒಟ್ಟು ಕಾರ್ಯಕ್ಷಮತೆ",
+    "chartTitle2": "ಕೆಲಸದ ಕಾರ್ಯಕ್ಷಮತೆ",
+    "chartTitle3": "ಒಟ್ಟು ಆಯ್ಕೆಗಳು",
+    "chartTitle4": "ಒಟ್ಟು ನಿರಾಕರಣೆಗಳು"
   },
   "users": {
     "grid": {

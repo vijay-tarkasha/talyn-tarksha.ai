@@ -122,7 +122,7 @@ const CandidateResume = (props: IResumeProps) => {
 
   return (
     <>
-      <div className="mt-10">
+      <div className="lg:mt-10 md:mt-5 pb-3">
         <div className="rounded-lg shadow-lg max-h-fit">
           <div className="px-10 py-5">
             <div className="items-center justify-between md:flex">
@@ -187,7 +187,7 @@ const CandidateResume = (props: IResumeProps) => {
               </div>
               <div className="mt-3 md:mt-0 flex md:block item-center justify-center">
                 <Button
-                  className="filled-button"
+                  className="filled-button md:p-5"
                   onClick={() => fileInputRef.current?.click()}
                   leftSection={<FaUpload className="button-icon" />}
                 >

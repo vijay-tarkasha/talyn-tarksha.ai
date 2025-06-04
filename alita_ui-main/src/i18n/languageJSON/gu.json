@@ -536,7 +536,11 @@
   },
   "dashboard": {
     "title": "ડેશબોર્ડ",
-    "chartTitle": "આંકડા"
+    "chartTitle": "આંકડા",
+    "chartTitle1": "કુલ કાર્યક્ષમતા",
+    "chartTitle2": "નોકરી કાર્યક્ષમતા",
+    "chartTitle3": "કુલ પસંદગીઓ",
+    "chartTitle4": "કુલ નકારાંવો"
   },
   "users": {
     "grid": {

@@ -94,17 +94,17 @@ const ApplicationGrid = (_props: IApplicationGridInput) => {
       // sortable: false,
     },
     {
+      attribute: "fitment_score",
+      name: "Fitment Score",
+      label: applicationTexts.grid.fitment,
+      type: "string",
+    },
+    {
       attribute: "resumeOverview",
       name: "resumeOverview",
       label: applicationTexts.grid.resume,
       type: "string",
     },
-    // {
-    //   attribute: "fitment_score",
-    //   name: "Fitment Score",
-    //   label: candidatesTexts.grid.fitment,
-    //   type: "string",
-    // },
     {
       attribute: "status",
       name: "status",
@@ -150,7 +150,7 @@ const ApplicationGrid = (_props: IApplicationGridInput) => {
         title={applicationTexts.title}
         pageSize={[10, 20, 30]}
         ref={gridRef}
-        quickSearch="name"
+        quickSearch="search"
         getPluginOptions={getPluginOptions}
         onRowClick={handleRowClick}
         endPoint={apiEndPoint}

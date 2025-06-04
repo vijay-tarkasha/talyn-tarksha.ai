@@ -122,15 +122,15 @@ const ApplicationNewPage = (props: IInput) => {
 
   return (
     <>
-      <div className="px-4 md:px-10">
-        <div className="text-3xl font-bold py-4">
+      <div className="mt-5 px-4 md:px-10">
+        <div className="text-2xl md:text-3xl font-bold">
           {applicationTexts?.new?.title}
         </div>
 
-        <div className="rounded-xl shadow-lg">
-          <div className="px-25 py-10">
+        <div className="rounded-xl shadow-lg p-4 md:p-10 mt-5">
+          <div className="">
             <PalmyraForm ref={formRef} onValidChange={setValid}>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <ServerLookup
                     attribute="title"
@@ -148,7 +148,7 @@ const ApplicationNewPage = (props: IInput) => {
                     placeholder={applicationTexts?.input?.jobTitlePh}
                   />
                 </div>
-                <div className="flex justify-center align-middle p-8">
+                <div className="flex justify-center md:justify-center lg:justify-around items-center p-4 md:p-8">
                   <Button
                     loading={loading}
                     loaderProps={{ type: "dots" }}
@@ -171,7 +171,7 @@ const ApplicationNewPage = (props: IInput) => {
               />
             </PalmyraForm>
 
-            <div className="grid grid-cols-2 gap-6 mt-6 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 mb-4">
               <UploadedApplications pageName={props.pageName} />
               <ImageDropZone
                 fileList={fileList}

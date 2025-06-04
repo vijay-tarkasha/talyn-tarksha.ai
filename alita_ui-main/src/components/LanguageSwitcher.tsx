@@ -40,7 +40,7 @@ const LanguageSwitcher: React.FC = () => {
             ka:"ಕನ್ನಡ ",
             mar:"मराठी",
             gu:"ગુજરાતી",
-            fr: "French",
+            // fr: "French",
           }}
           rightSection={
             <IoIosArrowDown

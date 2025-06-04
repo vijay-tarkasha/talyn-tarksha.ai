@@ -162,7 +162,7 @@ const Sidebar = (props: SidebarInput) => {
     //   <ConfirmationModal close={close} opened={opened} submit={handleLogOut}
     //     description={t('sidebarMenu.confirmDialog.description')} />
     // </div>
-    <div className="text-black flex flex-col h-screen">
+    <div className="text-black flex flex-col h-full fixed ">
       <div className="flex justify-center items-center py-3">
         <div
           className="cursor-pointer h-[80px] item-center flex"
@@ -176,7 +176,7 @@ const Sidebar = (props: SidebarInput) => {
           menuList.map((d) => (
             <div
               key={d.label}
-              className={`flex items-center px-2 py-2 rounded-xl cursor-pointer transition-all 
+              className={`flex lg:w-50 items-center px-2 py-2 rounded-xl cursor-pointer transition-all 
               ${
                 location.pathname.startsWith(d.path)
                   ? "menu-list selected-menu-list"

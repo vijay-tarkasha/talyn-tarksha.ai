@@ -536,7 +536,11 @@
   },
   "dashboard": {
     "title": "ഡാഷ്ബോർഡ്",
-    "chartTitle": "സ്ഥിതിവിവരക്കണക്കുകൾ"
+    "chartTitle": "സ്ഥിതിവിവരക്കണക്കുകൾ",
+    "chartTitle1": "ആകെ പ്രകടനം",
+    "chartTitle2": "ജോലി പ്രകടനം",
+    "chartTitle3": "ആകെ തെരഞ്ഞെടുത്തവർ",
+    "chartTitle4": "ആകെ നിരസിച്ചവർ"
   },
   "users": {
     "grid": {

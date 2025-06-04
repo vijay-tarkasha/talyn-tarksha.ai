@@ -4,20 +4,20 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { ServiceEndpoint } from "../../config/ServiceEndpoints";
 import { useTenantGridstore } from "../../wire/AppStoreFactory";
-import CandidatesItemList from "./ApplicationItemList";
+import CandidatesItemList from "./CandidateItemList";
 
-const UploadedApplications = (props: any) => {
-  const apiEndPoint = ServiceEndpoint.application.restApi;
+const UploadedCandidates = (props: any) => {
+  const apiEndPoint = ServiceEndpoint.candidate.restApi;
   const store = useTenantGridstore(apiEndPoint);
   const { t } = useTranslation();
-  const applicationTexts: any = t("application", { returnObjects: true });
+  const candidatesTexts: any = t("candidates", { returnObjects: true });
 
   const refreshTopic = props.pageName + "/refresh";
 
   const queryRef = useRef<IPageQueryable>();
   const paginationRef = useRef<any>();
 
-  // const pageTitle = props.customTitle || applicationTexts?.subTitle;
+//   const pageTitle = props.customTitle || candidatesTexts?.subTitle;
 
   const onDataChange = (_newData: any[], _oldData?: any[]) => {
     if (paginationRef.current && paginationRef.current.refresh) {
@@ -32,7 +32,7 @@ const UploadedApplications = (props: any) => {
   return (
     <div className="border-gray-100 border-1 rounded-lg pb-2">
       <div className="text-base text-center md:text-lg font-semibold sticky top-0 lg:z-0 xl:z-10 p-2 dash-user-update-header">
-        {applicationTexts?.subTitle}
+        {candidatesTexts?.subTitle}
       </div>
       <div className="candidate-card-wrapper">
         <ServerCardLayout
@@ -56,4 +56,4 @@ const UploadedApplications = (props: any) => {
   );
 };
 
-export default UploadedApplications;
+export default UploadedCandidates;

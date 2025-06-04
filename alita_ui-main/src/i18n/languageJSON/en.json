@@ -262,6 +262,7 @@
     "save": "Save",
     "submit": "Submit Application",
     "submitCan": "Submit Candidates",
+    "removed": "Remove",
     "edit": "Edit",
     "update": "Update",
     "upload": "Upload",
@@ -442,6 +443,27 @@
         "or": "OR",
         "browse": "Browse Files"
       }
+    },
+    "edit": {
+      "title": "Fitment Summary"
+    },
+    "input": {
+      "jobTitle": "Job Title",
+      "aiGen": "AI Generated Short Description",
+      "status": "Status",
+      "resume": "Resume Overview",
+      "posting": "Relevence to Job Posting",
+      "fitment": "Fitment Score",
+      "feedback": "AI Interview feedback",
+      "email": "Email",
+      "profile": "Profile",
+      "location": "Location",
+      "name": "Name",
+      "mobile": "Mobile",
+      "tech": "Tech Stacks",
+      "summary": "Resume Summary",
+      "fitsummary": "Fitment Summary",
+      "jobTitlePh": "Select Job Title"
     }
   },
   "profile": {
@@ -539,7 +561,11 @@
   },
   "dashboard": {
     "title": "Dashboard",
-    "chartTitle": "Statistics"
+    "chartTitle": "Statistics",
+    "chartTitle1": "Overall Performance",
+    "chartTitle2": "Job Performance",
+    "chartTitle3": "Overall Selects",
+    "chartTitle4": "Overall Rejects"
   },
   "users": {
     "grid": {

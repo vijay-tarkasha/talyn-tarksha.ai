@@ -99,6 +99,23 @@ const ApplicationEditPage = (props: IInput) => {
     return req;
   };
 
+  // const PreSave = (data: any) => {
+  //   const candidateId = data?.candidate?.id || data?.candidate || data?.id;
+  //   if (!candidateId) {
+  //     toast.error("Candidate ID not found. Cannot save.");
+  //     return;
+  //   }
+
+  //   const req = {
+  //     ...formRef?.current?.getData(),
+  //     jobPosting: data?.jobPosting?.id,
+  //     status: statusRef?.current?.getValue(),
+  //     candidate: candidateId,
+  //   };
+  //   console.log("Submitting to API:", req);
+  //   return req;
+  // };
+
   return (
     <div className="candidate-edit-container px-2 md:px-5">
       <div className="sticky top-0 bg-white p-2 z-50">

@@ -88,10 +88,10 @@ const CandidateId = (props: IInput) => {
   };
   const statusRef = useRef<any>();
 
-  const PreSave = (data: any) => {
+  const PreSave = () => {
     const req = {
       ...formRef?.current?.getData(),
-      jobPosting: data.jobPosting.id,
+      // jobPosting: data.jobPosting.id,
       status: statusRef?.current.getValue(),
     };
     return req;

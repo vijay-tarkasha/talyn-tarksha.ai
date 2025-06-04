@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import './ButtonSwitch.css';
 
 interface ButtonSwitchProps {
-    options: Record<string, string>;
+    options: Record<string, string | React.ReactNode>;
     defaultValue?: any
     label?: string
     onSelectionChange?: (value: string) => void;

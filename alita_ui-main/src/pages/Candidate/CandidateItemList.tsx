@@ -3,18 +3,18 @@ import { useDisclosure } from "@mantine/hooks";
 import { useTranslation } from "react-i18next";
 import { MdModeEdit } from "react-icons/md";
 import ProfileImage from "../../components/widget/ProfileImage";
-import ApplicationEditPage from "./editPage/ApplicationEditPage";
 import { IoTrashOutline } from "react-icons/io5";
 import ButtonSwitch from "../../components/widget/ButtonSwitch";
-import { useState } from "react";
-// import CandidateEditPage from "./editPage/ApplicationEditPage";
+import CandidateId from "./editpage/CandidateId";
+import {  useState } from "react";
 
-const ApplicationItemList = (props: any) => {
+const CandidateItemList = (props: any) => {
   const [opened, { open, close }] = useDisclosure(false);
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
+  const [buttonValue, setButtonValue] = useState("true");
   const { t } = useTranslation();
   const btnTexts: any = t("buttonLabels", { returnObjects: true });
-  const applicationTexts: any = t("application", { returnObjects: true });
+  const candidatesTexts: any = t("candidates", { returnObjects: true });
   const candidate = props.data;
 
   const techStacks = candidate?.tech_stacks;
@@ -24,9 +24,11 @@ const ApplicationItemList = (props: any) => {
   };
 
   const handleModalClose = () => {
-    close(); 
-    setActiveAccordion(null); 
+    close();
+    setActiveAccordion(null);
   };
+
+
 
   return (
     <>
@@ -68,7 +70,7 @@ const ApplicationItemList = (props: any) => {
               <Accordion.Panel className="acrd-panel-detail">
                 <div className="user-profile-field">
                   <div className="user-profile-label text-sm font-semibold">
-                    {applicationTexts?.input?.profile}
+                    {candidatesTexts?.input?.profile}
                   </div>
                   <div className="user-profile-value text-sm">
                     {techStacks?.join(", ") || "--"}
@@ -76,20 +78,27 @@ const ApplicationItemList = (props: any) => {
                 </div>
                 <div className="user-profile-field mt-3">
                   <div className="user-profile-label text-sm font-semibold">
-                    {applicationTexts?.input?.email}
+                    {candidatesTexts?.input?.email}
                   </div>
                   <div className="user-profile-value text-sm">
                     {candidate.email}
                   </div>
                 </div>
-                {/* <div
-                  className="acrd-btn-container flex items-center justify-center rounded-lg mt-3"
-                  onClick={open}
-                >
+                {/* <div className="acrd-btn-container flex items-center justify-center gap-3 rounded-lg mt-3">
                   <div></div>
                   <Button
                     className="filled-button"
+                    leftSection={
+                      <IoTrashOutline className="button-icon" />
+                    }
+                    onClick={handleRemove}
+                  >
+                    {btnTexts.removed}
+                  </Button>
+                  <Button
+                    className="filled-button"
                     leftSection={<MdModeEdit className="button-icon" />}
+                    onClick={open}
                   >
                     {btnTexts.edit}
                   </Button>
@@ -97,10 +106,10 @@ const ApplicationItemList = (props: any) => {
                 <div className="items-center gap-4 py-2 md:flex">
                   <div className="w-full">
                     <ButtonSwitch
-                      defaultValue="true" // default as Edit
+                      defaultValue={buttonValue}
                       options={{
                         true: (
-                          <div className="flex items-center gap-2 text-rose-600">
+                          <div className="flex items-center gap-2 ">
                             <IoTrashOutline />
                             {btnTexts?.removed}
                           </div>
@@ -113,10 +122,11 @@ const ApplicationItemList = (props: any) => {
                         ),
                       }}
                       onSelectionChange={(value) => {
-                        if (value === "true") {
-                          handleRemove();
-                        } else {
+                        setButtonValue(value); // update local state
+                        if (value != "true") {
                           open();
+                        } else {
+                          handleRemove();
                         }
                       }}
                     />
@@ -135,12 +145,12 @@ const ApplicationItemList = (props: any) => {
       <Modal
         opened={opened}
         onClose={handleModalClose}
-        title={applicationTexts?.edit.title}
+        title={candidatesTexts?.edit.title}
         centered
         className="candidate-modal"
         transitionProps={{ transition: "fade", duration: 200 }}
       >
-        <ApplicationEditPage
+        <CandidateId
           close={handleModalClose}
           id={candidate.id}
           refreshTopic={props.refreshTopic}
@@ -150,4 +160,4 @@ const ApplicationItemList = (props: any) => {
   );
 };
 
-export default ApplicationItemList;
+export default CandidateItemList;

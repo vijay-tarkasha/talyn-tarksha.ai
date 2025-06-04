@@ -537,7 +537,11 @@
   },
   "dashboard": {
     "title": "डैशबोर्ड",
-    "chartTitle": "सांख्यिकी"
+    "chartTitle": "सांख्यिकी",
+    "chartTitle1": "कुल प्रदर्शन",
+    "chartTitle2": "नौकरी प्रदर्शन",
+    "chartTitle3": "कुल चयन",
+    "chartTitle4": "कुल अस्वीकृति"
   },
   "users": {
     "grid": {

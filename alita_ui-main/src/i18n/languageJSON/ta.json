@@ -538,7 +538,11 @@
   },
   "dashboard": {
     "title": "முகப்பலகை",
-    "chartTitle": "புள்ளிவிவரங்கள்"
+    "chartTitle": "புள்ளிவிவரங்கள்",
+    "chartTitle1": "மொத்த செயல்திறன்",
+    "chartTitle2": "வேலை செயல்திறன்",
+    "chartTitle3": "மொத்த தேர்வுகள்",
+    "chartTitle4": "மொத்த நிராகரிப்புகள்"
   },
   "users": {
     "grid": {
