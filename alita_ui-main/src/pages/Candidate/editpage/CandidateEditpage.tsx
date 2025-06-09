@@ -17,7 +17,7 @@ const CandidateEditPage = ({ value, onChange }: IProps) => {
         onChange={(val) => onChange((val ?? "Resume") as "Resume" | "CSV")}
         options={options}
         nothingFoundMessage={"--No data available--"}
-        className="w-full font-semibold"
+        className="candidate-dropdown"
       />
     </div>
   );

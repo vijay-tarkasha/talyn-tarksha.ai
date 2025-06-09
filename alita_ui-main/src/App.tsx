@@ -26,6 +26,7 @@ import "./style/ResponsiveLayoutX.css";
 import "./template/template.css";
 import "./themes/Colors.css";
 import "./themes/colorDef.css";
+import "./App.css";
 import { InterviewChatBot } from "./pages/interview/candidate/InterviewChatBot.tsx";
 // import SamplePage from "./pages/auth/SamplePage.tsx";
 

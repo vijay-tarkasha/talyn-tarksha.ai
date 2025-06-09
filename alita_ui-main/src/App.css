@@ -1,0 +1,45 @@
+/* .m_38a85659{
+      --popover-shadow: var(--mantine-shadow-md);
+    transition-property: opacity;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+    opacity: 1;
+    z-index: 300;
+    top: 155.738px;
+    left: 7px;
+    width: 300px;
+} */
+/* .py-field-group-container {
+
+} */
+
+.m_38a85659.mantine-Popover-dropdown {
+  background-color: #ffffff; /* Change background */
+  border: 1px solid #ddd; /* Optional border */
+}
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .py-datagrid-header-left-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Assuming the container uses flex-direction: column already */
+
+  /* Make the button a column flex container */
+  button.mantine-Button-root {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* full width by default */
+  }
+}
+
+
+
+

@@ -104,7 +104,7 @@ const UserGrid = (_props: IUserGridInput) => {
         title={usersTexts.grid.title}
         pageSize={[10, 20, 30]}
         ref={gridRef}
-        quickSearch="email"
+        quickSearch="search"
         getPluginOptions={getPluginOptions}
         endPoint={apiEndPoint}
         DataGridControlProps={{ newRecord }}

@@ -1,0 +1,11 @@
+.candidate-dropdown {
+  font-size: 20px !important;
+  font-weight: 1000 !important;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
+}
+
+@media (max-width: 768px) {
+  .candidate-dropdown {
+    left: 20% !important;
+  }
+}

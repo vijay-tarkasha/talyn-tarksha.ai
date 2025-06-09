@@ -50,14 +50,14 @@ const JobGrid = (_props: IPageInput) => {
       type: "string",
       width: "50px",
       cellRenderer: roleIdRenderer,
-      quickSearch: true,
-      searchable: true,
     },
     {
       attribute: "job_title",
       name: "job_title",
       label: jobTexts.grid.name,
       type: "string",
+      quickSearch: true,
+      searchable: true,
     },
     {
       attribute: "job_short_desc",
@@ -176,16 +176,16 @@ const JobGrid = (_props: IPageInput) => {
         customizer={gridCustomizer}
         title={jobTexts?.title}
         ref={gridRef}
-        quickSearch="roleId"
+        quickSearch="search"
         getPluginOptions={getPluginOptions}
         endPoint={endPoint}
         onRowClick={rowClick}
         pageSize={[10, 20, 30]}
-        EmptyChild={() => (
-          <div className="text-center text-gray-400 p-4 text-3xl font-bold">
-            No jobs to display.
-          </div>
-        )}
+        // EmptyChild={() => (
+        //   <div className="text-center text-gray-400 p-4 text-3xl font-bold">
+        //     No jobs to display.
+        //   </div>
+        // )}
       />
 
       {/* <Modal

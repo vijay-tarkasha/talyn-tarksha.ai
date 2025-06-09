@@ -30,16 +30,16 @@ const LanguageSwitcher: React.FC = () => {
           defaultValue={savedLanguage}
           attribute="language"
           onChange={(value: any) => changeLanguage(value)}
-          className="text-sm font-semibold text-gray-300"
+          className="text-xl font-semibold"
           options={{
             en: "English",
             ta: "தமிழ்",
             hi: "हिन्दी",
             te: "తెలుగు ",
-            ma:"മലയാളം",
-            ka:"ಕನ್ನಡ ",
-            mar:"मराठी",
-            gu:"ગુજરાતી",
+            ma: "മലയാളം",
+            ka: "ಕನ್ನಡ ",
+            mar: "मराठी",
+            gu: "ગુજરાતી",
             // fr: "French",
           }}
           rightSection={
@@ -47,7 +47,6 @@ const LanguageSwitcher: React.FC = () => {
               className={`cursor-pointer transition-transform duration-300 ${
                 open ? "rotate-180" : "rotate-0"
               }`}
-              
             />
           }
           onDropdownOpen={() => setOpen(true)}
